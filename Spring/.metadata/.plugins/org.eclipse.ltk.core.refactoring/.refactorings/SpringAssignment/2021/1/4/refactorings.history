@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename resource &apos;SpringAssignment/src/jsp/app/com/MainCls.java&apos; to &apos;nani.java&apos;" description="Rename resource &apos;MainCls.java&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/jsp/app/com/MainCls.java" name="nani.java" stamp="1611662349612" updateReferences="true"/>
-</session>
