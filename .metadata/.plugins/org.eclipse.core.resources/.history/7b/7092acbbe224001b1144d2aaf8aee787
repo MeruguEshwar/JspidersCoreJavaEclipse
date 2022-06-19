@@ -1,0 +1,14 @@
+package Array;
+
+public class Program14 
+{
+	public static void main(String[] args) 
+	{
+		String s1 = "iam born in india";
+		String[] sary = s1.split(" ");
+		for(String s:sary)
+		{
+			System.out.println(s);
+		}
+	}
+}

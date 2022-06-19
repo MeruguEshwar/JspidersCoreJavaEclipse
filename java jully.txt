@@ -1,0 +1,1811 @@
+java jully
+
+10-07-2020
+
+core java
+
+sec. 1: building blocks
+1) java process
+2) java installation
+3) data typesand variables
+4) first java program 
+5) operations
+   1. arithmatic
+   2. relational
+   3. logical
+   4. concat
+6) control statements
+   1. conditional statements
+      1. simple if 
+      2. if else
+      3. else if 
+      4. switch
+   2. looping statments
+      1. for loop
+      2. while loop
+      3. do while loop
+      4. for each loop
+
+sec. 2: programming
+1) basic programs
+2) pattrern programs
+3) string programs
+4) array programs
+
+sec. 3: oops
+1) methods
+2) method overloading
+3) static and non-static members
+4) class and object
+5) execution diag
+6) constucter
+7) constucter overloading
+8) constucter chaining
+9) inheritence (is a relationship)(pillar 1)
+10) method overriding
+11) abstract
+12) interface
+13) derived data type
+14) life cycle of obj
+15) composition (has a relationship)
+16) type casting
+    1. narrowing
+    2. widening 
+    3. upcasting
+    4. downcasting
+17) method binding
+    1. compile time 
+    2. run time
+18) polymorphism (pillar 2)
+    1. compile time
+    2. run time
+19) eclipse ide tool
+20) packages
+21) access specifications
+22) java bean class
+23) encapsulation (pillar 3)
+24) abstraction (pillar 4)
+25) singleton class
+
+sec. 4: inbuilt library 
+1) system class
+2) scanner class
+3) obj class
+4) string class
+5) wrapper classes
+6) arrays 
+7) exception handling
+   1. checked 
+   2. unchecked
+   3. try
+   4. catch
+   5. throw
+   6. throws
+   7. finally
+   8. exception hierarchy
+8) multi threading
+   1. thread class
+   2. runnable interface
+   3. thread properties
+   4. itc method
+   5. thread safety obj
+   6. not thread safety obj
+   7. thread lifecycle 
+9) file handling
+   1. serialization
+   2. deserialization
+
+sec. 5: bonus/imp sec
+1) data structure for collection
+2) core java project
+3) resume building
+
+program is nothing but set of instruction
+multiple program put together is called as an application or s/w or tool or product or project
+
+program has 2 things
+1) data
+2) operation
+example 1) gmail; data: mail id, passward; op: login
+        2) ienteraction on go to meeting app; data: msg; op: send
+        3) wirhdraw monet; data: enter and check amount; op: get money or error
+
+data is stored in memory, it may be sd card, pendrive, drive/hard disk etc
+in java this memory as variable
+so in java data is stored in variable
+every memory block has name, type, data 
+for example int age= 59; where int- type, age- name, 59- data
+datatype variable= data; is syntax of creating variable and storong data
+
+data types (types of data will be like) 
+1) integer (int) like age, marks as 43, 37
+int age=37
+2) decimal/float (double) like height, %age like 3.4, 98.87
+double percentage= 98.87
+3) sigle character (char), may be digit, alphabet, special symbol which will be in sigle quotes like '2', 'a', ',' 
+it will support space char like ' ' but it wont support empty char like ''
+char name='2'
+4) boolean (boolean) like true and false
+boolean result= true
+5) string (String) anything which will be in double quotes is string 
+it may be a no., alphabet, empty space, space, group of char, group of words, symbol, decimal, boolean etc
+String mail="4", "S", "", " ", "", "sjs04", "how r u", "$", "4.2", "true"
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+11-07-2020
+
+java process
+1) coding
+2) compilation
+3) execution
+
+coding
+program should begin with Class followed by ClassName to identify program
+starting point is called as mainmethod 
+
+		Class ClassName
+		{
+		public static void main(String[]args)
+		{
+			System.out.println(msg);
+		}
+		}
+
+save the program with extetion as .java- filename.java
+
+Class and ClassName should be same
+String[]- string array
+public static void main(String[]args)
+{
+System.out.println(msg);
+} is mainmethod
+
+compilation command is javac filename.java
+execution command is java filename 
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+13-07-2020
+
+every type of data and print the variable
+		class  pg3
+		{
+		public static void main(String[] args) 
+		{
+		int x = 23;
+		double y = 1.2;
+		char z = 's';
+		boolean  i = true;
+		String j = "hi";
+		System.out.println(x);
+		System.out.println(y);
+		System.out.println(z);
+		System.out.println(i);
+		System.out.println(j);
+		}
+		}
+
+
++ operator has 2 properties in java
+1) addition- if both inputs r no. example 2+2.3=4.3
+2) concat- joining- if any of the 2 inputs is string example 4+"hi"="4hi"- output will be string
+
+ASICC
+for every single character, no, digit, symbol a unique ASCII no exist
+example 'D'+5= ASICC no of D is 68 so now 68+5=73
+'D'+'Z'= 68+90= 158
+'Q'+2.3= 81+2.3=83.3
+
+no/char+no/char= addition will be perforned
+string+any data= concat will be performed
+
+
+		class pg4 
+		{
+		public static void main(String[] args) 
+		{
+		int a = 75;
+		System.out.println(a);
+		System.out.println("a is" + a);
+		System.out.println(a + "is in a");
+		}
+		}
+
+
+	write a program to store ur name with meaning full string
+		class pg5 
+		{
+		public static void main(String[] args) 
+		{
+		String a = "shubham";
+		System.out.println(a);
+		System.out.println(a + "sarnaik");
+		}
+		}
+
+
+write pg to store ur name and age and print it in one single state
+		class pg7 
+		{
+		public static void main(String[] args) 
+		{
+		String a = "shubham";
+		int b = 22;
+		System.out.println("my name is" + a + "my age is" + b);
+		}
+		}
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+14-07-2020
+
+	write a pg to store ur name and fathers name and print with meaningfull msg
+		class pg8
+		{
+		public static void main(String[] args) 
+		{
+		String a = "shubham";
+		String b = "jayant";
+		System.out.println("My name is " + a + " and I am s/o " + b);
+		}
+		}
+			in println, ln changes line otherwise o/p comes in single line
+
+
+increment operator- ++, increses value by 1
+1) preincrement- ++k
+2) postincrement- k++
+example a=51 so
+s.o.pln(++a) then o/p-52, stored value- 52
+s.o.pln(a++) then o/p-51, stored value- 52 (since first we r meeting a by which o/p will be shown)
+
+decrement operator- --, reduces value by 1
+1) predecrement- --k
+2) postdecrement- k--
+example a=51 so
+s.o.pln(--a) then o/p-50, stored value- 50
+s.o.pln(a--) then o/p-51, stored value- 50 (since first we r meeting a by which o/p will be shown)
+
+int a=48;
+s.o.pln(a);    (o/p-48)
+s.o.pln(a++);    (o/p-48, store value-49)
+s.o.pln(++a);    (o/p- 50, store value-50)
+s.o.pln(a);    (o/p-50, store value-50)
+
+int a=37;
+s.o.pln(a);    (o/p-37)
+s.o.pln(a--);    (o/p-37, store value-36)
+s.o.pln(++a);    (o/p-37, store value-37)
+s.o.pln(--a);    (o/p-36, store value-36)
+s.o.pln(a--);    (o/p-36, store value-35)
+s.o.pln(a);    (o/p-35)
+
+int a=42;
+s.o.pln(++a + a++);    (43+43=86, a=44)
+s.o.pln(a);    (a=44)
+
+int a=47;
+s.o.pln(++a - a++ + ++a);    (48 - 48 + 50 = 50)
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+15-07-2020
+
+arithmatic operators
+1) + addition operators 
+2) - subtraction operators
+3) * multiplication operators
+4) / division operators, o/p will be quotient, 6/2=3
+5) % division operators, o/p will be reminder, 6%2=0
+	
+relational operators (o/p will be always boolean as true/false)
+1) < less than
+2) > greater than
+3) <= lesser than or equals to
+4) >= greater than or equals to 
+5) == equals to
+6) != not equals to
+
+logical operators
+1) && and operators 
+	truth table
+	i/p1   i/p2   o/p
+	true   true   true
+	true   false  false
+	false  true   false
+	false  false  false
+2) || or operators
+	truth table
+	i/p1   i/p2   o/p
+	true   true   true
+	true   false  true
+	false  true   true
+	false  false  false
+3) ! not operators
+	truth table
+	i/p1   o/p
+	true   false 
+	false  true
+
+conditional statements/decission making statements[D.M.S.]
+1) if else statements
+	syntax
+	if(conditon)       ...creating conditions need relational, logical operators since boolean answer is required
+	{                  ...opening block
+	if operation
+	}                  ...closing block 
+	else
+	{
+	else operation
+	}
+	                   ...if conditon is true- if operation is executed
+                           ...if condition is false- else operation is executed
+	write a program to check given age is eligible for driving or not
+		class  pg9
+		{
+		public static void main(String[] args) 
+		{
+		int age=22;
+		if(age>=18)
+        		{
+			System.out.println("eligible for dl");
+			}
+		else
+        		{
+        		System.out.println("not eligible for dl");
+			}
+		}
+		}
+	write a program to check given age is senior citizen or not
+		class  pg10
+		{
+		public static void main(String[] args) 
+		{
+		int age=22;
+		if(age>=60)
+        		{
+			System.out.println("senior citizen");
+			}
+		else
+        		{
+       	 		System.out.println("not senior citizen");
+			}
+		}
+		}
+	write a program to check wheather given no. is divisible by 5 or not
+		class pg11 
+		{
+		public static void main(String[] args) 
+		{
+		int number=68;
+		int rem=number%5;
+		if (rem==0)
+			{
+			System.out.println("divisible by 5");
+			}
+		else 
+			{		
+			System.out.println("not divisible by 5");
+        		}
+		}
+		}
+	write a program to check wheather given no. is	even or	odd
+		class pg12 
+		{
+		public static void main(String[] args) 
+		{
+		int number=68;
+		int rem=number%2;
+		if (rem==0)
+			{
+			System.out.println("no. is even");
+			}
+		else 
+			{		
+			System.out.println("no. is odd");
+        		}
+		}
+		}
+	write a program to check given age is minor for employment
+		class ass2 
+		{
+		public static void main(String[] args) 
+		{
+		int age=22;
+		if(age<=14)
+        		{
+			System.out.println("minor age");
+			}
+		else
+        		{
+        		System.out.println("not minor age");
+			}
+		}
+		}
+
+2) else if
+	syntax
+	if(condition)
+	{
+	if operation
+	}
+	else if(condition)
+	{
+	else if operation
+	}
+	else if......n no. of types
+	else
+	{
+	else operation
+	}
+	write a program to check wheather given 2 nos. r greater, lesser, or equal
+		class ass3
+		{
+		public static void main(String[] args) 
+		{
+		int a=37;
+		int b=32;
+		if(a<b)
+			{		
+			System.out.println("a is lesser than b");
+			}
+		else if(a>b)
+			{		
+			System.out.println("a is gretter than b");
+			}
+		else 
+			{		
+			System.out.println("a and b r same");
+			}
+		}
+		}
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+16-07-2020
+
+	write a program to print students rank based on students grade reffer the table
+	grade     rank
+	a         1
+	b         2 
+	c         3
+	d         4
+		class pg13 
+		{
+		public static void main(String[] args) 
+		{
+		char grade= 'z' ;
+		if (grade=='a')
+			{
+			System.out.println("first rank");
+	    		}
+		else if (grade=='b')
+			{
+			System.out.println("second rank");
+			}
+		else if (grade=='c')
+			{
+			System.out.println("pass");
+			}
+		else if (grade=='d')
+			{
+			System.out.println("fail");
+			}
+		else 
+			{
+			System.out.println("invalid grade.... note:grade should be i b/w a to d");
+			}
+		}
+		}
+
+note:
+one condition as <, > or == then go with if else
+more than one condition as < or > then go with else if
+more than one condition as == then go with switch
+
+3) switch
+	syntax
+	switch(variable)
+	{
+	case value : operation;
+	break;
+	case value : operation;
+	break;......
+	.....n times
+	default : operation;
+	}
+	write a program to print students rank based on students grade reffer the table
+	grade     rank
+	a         1
+	b         2 
+	c         3
+	d         4
+		class pg14 
+		{
+		public static void main(String[] args) 
+		{
+		char grade= 'd' ;
+		switch(grade)
+		{
+			case 'a':System.out.println("first rank");
+			break;
+			case 'b':System.out.println("second rank");
+			break;
+			case 'c':System.out.println("pass");
+			break;
+			case 'd':System.out.println("fail");
+			break;
+			default: System.out.println("invalid rank");
+		}
+		}
+		}
+
+note:
+the words occuring in blue colour on editplus r called keywords which small except String and System
+class, public, static, void, int, char, double, boolean, if, else, switch, case, break, defaultetc r keywordsR-
+	
+	write a program to print day name based on the day no.
+	dayno.    dayname
+        1         mon
+	2         tues
+	3         wednes
+	4         thurs
+	5         fri
+	6         satur
+	7         sun
+		class pg15 
+		{
+		public static void main(String[] args) 
+		{
+		int dayno= 4;
+		switch(dayno)
+		{
+			case 1:System.out.println("monday");
+			break;
+			case 2:System.out.println("tuesday");
+			break;
+			case 3:System.out.println("wednesday");
+			break;
+			case 4:System.out.println("thursday");
+			break;
+			case 5:System.out.println("friday");
+			break;
+			case 6:System.out.println("satursday");
+			break;
+			case 7:System.out.println("sunday");
+			break;
+			default: System.out.println("invalid day");
+		}
+		}
+		}
+	write a program to print given day name and remaining future day names till the end of week based on the given day no
+		class ass4 
+		{
+		public static void main(String[] args) 
+		{
+		int dayno= 4;
+		switch(dayno)
+		{
+			case 1:System.out.println("monday");
+			case 2:System.out.println("tuesday");
+			case 3:System.out.println("wednesday");
+	        	case 4:System.out.println("thursday");
+			case 5:System.out.println("friday");
+			case 6:System.out.println("satursday");
+			case 7:System.out.println("sunday");
+			break;
+			default:System.out.println("invalid day");
+		}
+		}
+		}
+			printing will be continue upto break	
+	write a program to print 
+	1) good mrng if the given no is divisible by 3, 
+	2) good noon if the no. is divisible by 7, 
+	3) good evng if it is devisible by 9 
+	4) for any other no. print good night
+		class  ass5
+		{
+		public static void main(String[] args) 
+		{
+		int number=68;
+		if (number%3==0)
+			{
+			System.out.println("Good Morning");
+			}
+		else if (number%7==0)
+			{
+			System.out.println("Good Noon");
+			}
+		else if (number%9==0)
+			{
+			System.out.println("Good Evening");
+			}
+		else 
+			{
+			System.out.println("Good Night");
+			}
+		}
+		}
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+17-07-2020
+
+	write a program to check whether given age is eligible for ias xam
+		class  pg16
+		{
+		public static void main(String[] args) 
+		{
+		int age=24;
+		if ((age>=21)&&(age<=32))
+		{
+			System.out.println("eligible for ias");
+		}
+		else
+		{
+			System.out.println("not eligible for ias");
+		}
+		}
+		}
+	write a program to check whether lovers r eligible for marriage
+		class pg17 
+		{
+		public static void main(String[] args) 
+		{
+		int boyage= 28;
+		int girlage= 23;
+		if ((boyage>=21)&&(girlage>=18))
+		{
+			System.out.println("eligible for marriage");
+		}
+		else
+		{
+			System.out.println("not eligible for marriage");
+		}
+		}
+		}
+	write a program to print students rank based on students grade
+	grade     rank
+	A/a       1
+	B/b       2
+	C/c       pass
+	D/D       fail
+		class  pg18
+		{
+		public static void main(String[] args) 
+		{
+		char grade='b';
+		if ((grade=='A')||(grade=='a'))
+			{
+				System.out.println("first rank");
+			}
+		else if ((grade=='B')||(grade=='b'))
+			{
+				System.out.println("second rank");
+			}
+		else if ((grade=='C')||(grade=='c'))
+			{
+				System.out.println("pass");
+			}
+		else if ((grade=='D')||(grade=='d'))
+			{
+				System.out.println("fail");
+			}
+		else 
+			{
+				System.out.println("invalid grade");
+			}
+		}
+		}
+	write a program to print students rank based on students marks
+	marks     rank
+	90-100    1
+	80-89     2
+	70-79     3
+	60-69     1st class
+	45-59     2nd class
+	0-44      fail
+		class ass6 
+		{
+		public static void main(String[] args) 
+		{
+		int marks= 69;
+		if ((marks<=100)&&(marks>=90))
+		{
+			System.out.println("first rank");
+		}
+		else if ((marks<=89)&&(marks>=80))
+		{
+			System.out.println("second rank");
+		}
+		else if ((marks<=79)&&(marks>=70))
+		{
+			System.out.println("third rank");
+		}
+		else if ((marks<=69)&&(marks>=60))
+		{
+			System.out.println("first class");
+		}
+		else if ((marks<=59)&&(marks>=45))
+		{
+			System.out.println("second class");
+		}
+		else if (marks>=44)
+		{
+			System.out.println("fail");
+		}
+		else
+		{
+			System.out.println("invalid");
+		}
+		}
+		}
+
+	write a program to print  
+	1) good eveng if no is divisible by 3,5 
+	2) good noon if no. is divisible only by 3
+	3) good mrng if no. is divisible only by 5
+	4) good night for other no
+		class ass7 
+		{
+		public static void main(String[] args) 
+		{
+		int number=27;
+		if ((number%3==0)&&(number%5==0))
+		{
+			System.out.println("Good Evening");
+		}
+		else if (number%3==0)
+		{
+			System.out.println("Good Noon");
+		}
+		else if (number%5==0)
+		{
+			System.out.println("Good Morning");
+		}
+		else 
+		{
+			System.out.println("Good Night");
+		}
+		}
+		}
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+18-07-2020
+
+loop- something keeps on executing again and again
+1) for loop
+	syntax
+	for(variable creation; condition; increment/decrement)
+	{
+	operation
+	}
+steps
+1) first step executed only once where variable generated
+2) if condition is true then it will go ahead
+3) perform operation
+4) increment/decrement 
+as long as condition is true, loop will run
+		class  pg19
+		{
+		public static void main(String[] args) 
+		{
+		for (int a=1; a<=5; a++)
+		{
+			System.out.println("Hello World!");
+		}
+		}
+		}	
+	write a program sunday 10 times
+		class  pg20
+		{
+		public static void main(String[] args) 
+		{
+		for (int a=1; a<=10; a++)
+		{
+			System.out.println("sunday");
+		}
+		}
+		}
+	write a program using concat and for loop
+		class  pg21
+		{
+		public static void main(String[] args) 
+		{
+		for (int a=1; a<=14; a++)
+		{
+			System.out.println("a:"+a);
+		}
+		}
+		}
+	or
+		class  pg21
+		{
+		public static void main(String[] args) 
+		{
+		for (int a=14; a>=1; a--)
+		{
+			System.out.println("a:"+a);
+		}
+		}
+		}
+	write a program to print no. from 1 to 10
+		class pg22 
+		{
+		public static void main(String[] args) 
+		{
+		for (int a=1; a<=10; a++)
+		{
+			System.out.println("a is "+a);
+		}
+		}
+		}
+	write a program to print no. from 10 to 1
+		class pg23
+		{
+		public static void main(String[] args) 
+		{
+		for (int a=10; a>=1; a--)
+		{
+			System.out.println("a is "+a);
+		}
+		}
+		}
+	write a program to print A to Z
+		class pg24
+		{
+		public static void main(String[] args) 
+		{
+		for(char ch='A'; ch<='Z'; ch++)
+		{
+			System.out.print(ch);
+		}
+		}
+		}
+	write a program to print no. from 1 to 10, except no. 7
+		class pg25 
+		{
+		public static void main(String[] args) 
+		{
+		for (int a=1; a<=10; a++)
+		{
+		if (a!=7)
+			{
+			System.out.println(a);
+			}
+		}
+		}
+		}
+	write a program to print from A to Z except M
+		class pg26
+		{
+		public static void main(String[] args) 
+		{
+		for(char ch='A'; ch<='Z'; ch++)
+		{
+		if (ch!='M')
+			{
+			System.out.println(ch);
+			}
+		}
+		}
+		}
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+20-07-2020
+
+	write a program for fibonacci series
+		class pg27 
+		{
+		public static void main(String[] args) 
+		{
+		int n=8;
+		int a=0;
+		int b=1;
+		System.out.println(a);
+		System.out.println(b);
+		for (int i=1; i<n-2; i++)
+		{
+         		int c=a+b;
+		 	System.out.println(c);
+		 	a=b;
+		 	b=c;
+		}
+		}
+		}
+	write a program to check wheather given no. is prime or not
+		class pg28 
+		{
+		public static void main(String[] args) 
+		{
+		int n=11;
+		int nof=0;
+   		for (int i=1; i<=n; i++)
+    		{
+			if (n%i==0)
+			{
+			nof++;
+			}
+    		}
+		if (nof==2)
+		{
+			System.out.println("no. is  prime no");
+		}
+		else 
+		{
+			System.out.println("no. is  not prime no");
+		}
+		}
+		}
+	write a program to to only positive no.
+		class  pg29
+		{
+		public static void main(String[] args) 
+		{
+		int n=11;
+		if (n<=1)
+		{
+			System.out.println("invalid input");
+		}
+		else
+		{
+			int nof=0;
+			for (int i=1; i<=n; i++)
+			{
+				if (n%i==0)
+				{
+					nof++;
+				}
+			}
+			if (nof==2)
+	   		{
+				System.out.println("no. is  prime no");
+	    		}
+	    		else 
+			{
+				System.out.println("no. is  not prime no");
+			}
+		}
+		}
+		}
+	write a program to write all even fibonacci no. in bet 15 no.
+		class pg30
+		{
+		public static void main(String[] args) 
+		{
+		int n=15;
+		int a=0;
+		int b=1;
+		for (int i=1; i<n-2; i++)
+		{
+         		int c=a+b;
+		 	if (c%2==0)
+			{
+			 	System.out.println(c);
+		 	}
+		 	a=b;
+		 	b=c;
+		}
+		}
+		}
+	write a program to print all even no. present bet 1 to 10
+		class pg31
+		{
+		public static void main(String[] args) 
+		{		
+		for (int k=1; k<=10; k++)
+		{
+			if (k%2==0)
+			{
+				System.out.println(k);
+			}
+		}
+		}
+		}
+	fibonacci series and print only prime no. for n=15
+		class ass8 
+		{
+		public static void main(String[] args) 
+		{
+		int n=15;
+		int a=0;
+		int b=1;
+		for (int i=1; i<n-2; i++)
+		{
+			int c=a+b;
+			int nof=0;
+			if (c<=1)
+			{
+				System.out.println("invalid no.");
+			}
+			else 
+			{
+				for (int k=1; k<=c; k++)
+				{
+					if (c%k==0)
+					{
+						nof++;
+					}
+				}
+				if (nof==2)
+				{
+					System.out.println(c);
+				}
+			}
+			a=b;
+			b=c;
+		}
+		}
+		}
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+22-07-2020
+
+2) nested for loop
+for loop inside another for loop
+	write a program for sets of push ups
+		class pg32 
+		{
+		public static void main(String[] args) 
+		{
+		for (int i=1; i<=3; i++)
+		{
+			for (int j=1; j<=3; j++)
+			{
+				System.out.println("push up");
+			}
+			System.out.println("wait for 30 sec");
+		}
+		System.out.println("stop exercise");
+		}
+		}
+
+	
+			here i loop is for set no count and j is for count of push up in each set with 30 sec break bet each 2 set
+
+
+		class pg32 
+		{
+		public static void main(String[] args) 
+		{
+		for (int set=1; set<=3; set++)
+		{
+			for (int counter=1; counter<=3; counter++)
+			{
+				System.out.println("push up");
+			}
+			System.out.println("wait for 30 sec");
+		}
+		System.out.println("stop exercise");
+		}
+		}
+	write a program for 3 sets of push ups having 3 push ups each in 3x3 matrix form indicating * - 1 push up
+		class pg33 
+		{
+		public static void main(String[] args) 
+		{
+		for (int i=1; i<=3; i++)
+		{
+			for (int j=1; j<=3; j++)
+			{
+				System.out.print('*');
+			}
+			System.out.println();
+		}
+		}
+		}
+	write a program for 3 sets of push ups having 3 push ups each in 5x5 matrix form indicating * - 1 push up only get # when i=3, j=2
+		class pg34
+		{
+		public static void main(String[] args) 
+		{
+		for (int i=1; i<=5; i++)
+		{
+			for (int j=1; j<=5; j++)
+			{
+				if ((i==3)&&(j==2))
+				{
+					System.out.print('#');
+				}
+				else
+				{
+					System.out.print('*');
+				}
+			}
+			System.out.println();
+		}
+		}
+		}
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+23-07-2020
+
+pattern programming
+	write a 5x5 matrix program having * and # in diagonal (i==j)
+		class pg35
+		{
+		public static void main(String[] args) 
+		{
+		for (int i=1; i<=5; i++)
+		{
+			for (int j=1; j<=5; j++)
+			{
+				if (i==j)
+				{
+					System.out.print('#');
+				}
+				else
+				{
+					System.out.print('*');
+				}
+			}
+			System.out.println();
+		}
+		}
+		}
+	write a 5x5 matrix program having * and # in opposite diagonal 
+		class pg36
+		{
+		public static void main(String[] args) 
+		{
+		for (int i=1; i<=5; i++)
+		{
+			for (int j=1; j<=5; j++)
+			{
+				if (j==6-i)
+				{
+					System.out.print('#');
+				}
+				else
+				{
+					System.out.print('*');
+				}
+			}
+			System.out.println();
+		}
+		}
+		}
+	write a 5x5 matrix of * having # in 4th column
+		class pg37
+		{
+		public static void main(String[] args) 
+		{
+		for (int i=1; i<=5; i++)
+		{
+			for (int j=1; j<=5; j++)
+			{
+				if (j==4)
+				{
+					System.out.print('#');
+				}
+				else
+				{
+					System.out.print('*');
+				}
+			}
+			System.out.println();
+		}
+		}
+		}
+	write a 5x5 matrix of * having # on corners
+		class pg38
+		{
+		public static void main(String[] args) 
+		{
+		for (int i=1; i<=5; i++)
+		{
+			for (int j=1; j<=5; j++)
+			{
+				if ((i==1)&&(j==1) || (i==1)&&(j==5) || (i==5)&&(j==5) || (i==5)&&(j==1))
+				{
+					System.out.print('#');
+				}
+				else
+				{
+					System.out.print('*');
+				}
+			}
+			System.out.println();
+		}
+		}
+		}
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+24-07-2020
+
+	write a program to get x structure 
+		class pg39
+		{
+		public static void main(String[] args) 
+		{
+		for (int i=1; i<=5; i++)
+		{
+			for (int j=1; j<=5; j++)
+			{
+				if ((i==j) || (j==6-i))
+				{
+					System.out.print('*');
+				}
+				else
+				{
+					System.out.print(' ');
+				}
+			}
+			System.out.println();
+		}
+		}
+		}
+	write a program having logic i>=j, stars otherwise #
+		class  pg40
+		{
+		public static void main(String[] args) 
+		{
+		for (int i=1; i<=5; i++)
+		{
+			for (int j=1; j<=5; j++)
+			{
+				if (i>=j)
+				{
+					System.out.print('#');
+				}
+				else
+				{
+					System.out.print('*');
+				}
+			}
+			System.out.println();
+		}
+		}
+		}
+	write a program to get lower triangle
+		class  pg41
+		{
+		public static void main(String[] args) 
+		{
+		for (int i=1; i<=5; i++)
+		{
+			for (int j=1; j<=5; j++)
+			{
+				if (i>=j)
+				{
+					System.out.print('*');
+				}
+				else
+				{
+					System.out.print(' ');
+				}
+			}
+			System.out.println();
+		}
+		}
+		}
+	write a program to get upper triangle
+		class  pg41
+		{
+		public static void main(String[] args) 
+		{
+		for (int i=1; i<=5; i++)
+		{
+			for (int j=1; j<=5; j++)
+			{
+				if (i<=j)
+				{
+					System.out.print('*');
+				}
+				else
+				{
+					System.out.print(' ');
+				}
+			}
+			System.out.println();
+		}
+		}
+		}
+	write a program to get upper triangle of left side
+		class  pg42
+		{
+		public static void main(String[] args) 
+		{
+		for (int i=1; i<=5; i++)
+		{
+			for (int j=1; j<=5; j++)
+			{
+				if (i<=(6-j))
+				{
+					System.out.print('*');
+				}
+				else
+				{
+					System.out.print(' ');
+				}
+			}
+			System.out.println();
+		}
+		}
+		}
+
+	or
+		class  pg42
+		{
+		public static void main(String[] args) 
+		{
+		for (int i=5; i>=1; i--)
+		{
+			for (int j=1; j<=5; j++)
+			{
+				if (i>=j)
+				{
+					System.out.print('*');
+				}
+				else
+				{
+					System.out.print(' ');
+				}
+			}
+			System.out.println();
+		}
+		}
+		}
+	write a program for getting lower triangle on right side 
+		class  pg43
+		{
+		public static void main(String[] args) 
+		{
+		for (int i=1; i<=5; i++)
+		{
+			for (int j=1; j<=5; j++)
+			{
+				if (i+j>=6)
+				{
+					System.out.print('*');
+				}
+				else
+				{
+					System.out.print(' ');
+				}
+			}
+			System.out.println();
+		}
+		}
+		}
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+25-07-2020
+
+diag1
+# # # # *
+# # # * * *
+# # * * * * *
+# * * * * * * *
+* * * * * * * * * 
+
+diag2
+        *
+      * * *
+    * * * * *
+  * * * * * * *
+* * * * * * * * * 
+in java space matters for left side not for right side just like above diag 1 where spase is not given for right side
+
+diag3
+# # # # 
+# # # 
+# # 
+#
+
+	write a program for diag1
+		class  pg44
+		{
+		public static void main(String[] args) 
+		{
+		int ash=4;
+		int star=1;
+		for (int i=1; i<=5; i++)
+		{
+			for (int x=1; x<=ash; x++)
+			{
+				System.out.print("#");
+			}
+			for (int y=1; y<=star; y++)
+			{
+				System.out.print("*");
+			}
+			System.out.println();
+			ash--;
+			star+=2;
+		}
+		}
+		}
+
+
+	ash-- - reduces ash values from 4 to 1 to get diag 3	
+	star+=2 - will increse star value by 2 to get diag 2
+
+
+pyramid programs will have 1 outer and 2 inner loops
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+27-07-2020
+
+	write a program for following design
+	diag1
+	*
+	**
+	***
+	****
+	*****
+	****
+	***
+	**
+	*
+		by increase and go
+		class  pg45
+		{
+		public static void main(String[] args) 
+		{
+		int star=1;
+		for (int i=1; i<=9; i++)
+		{
+			for (int a=1; a<=star; a++)
+			{
+				System.out.print("*");
+			}
+			System.out.println();
+			if (i<=4)
+			{
+				star++;
+			}
+			else
+			{
+				star--;
+			}
+		}
+		}
+		}
+	or
+		go and increase 
+		class  pg45
+		{
+		public static void main(String[] args) 
+		{
+		int star=0;
+		for (int i=1; i<=9; i++)
+		{
+			if (i<=5)
+			{
+				star++;
+			}
+			else
+			{
+				star--;
+			}
+			for (int a=1; a<=star; a++)
+			{
+				System.out.print("*");
+			}
+			System.out.println();
+			
+		}
+		}
+		}
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+28-07-2020
+	
+	write a program for following design
+	diag1
+	   *
+	  ***
+	 *****
+	*******
+	 *****
+	  ***
+	   *
+		by increase and go
+		class pg46 
+		{
+		public static void main(String[] args) 
+		{
+		int star=1;
+		int space=3;
+		for (int i=1; i<=7; i++)
+		{
+			for (int x=1; x<=space; x++)
+			{
+				System.out.print(" ");
+			}
+			for (int y=1; y<=star; y++)
+			{
+				System.out.print("*");
+			}
+			if (i<=3)
+			{
+				star+=2;
+				space--;
+			}
+			else
+			{
+				space++;
+				star-=2;
+			}
+			System.out.println();
+		}
+		}
+		}
+	or
+		go and increase
+		class pg46 
+		{
+		public static void main(String[] args) 
+		{
+		int star=-1;
+		int space=4;
+		for (int i=1; i<=7; i++)
+		{
+			if (i<=4)
+			{
+				star+=2;
+				space--;
+			}
+			else
+			{
+				space++;
+				star-=2;
+			}
+			for (int x=1; x<=space; x++)
+			{
+				System.out.print(" ");
+			}
+			for (int y=1; y<=star; y++)
+			{
+				System.out.print("*");
+			}
+			System.out.println();
+		}
+		}
+		}
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+29-07-2020
+
+	write a program for diag1
+	diag1
+	    *
+	  *  *
+	 *  *  *
+	*  *  *  *
+		class pg47 
+		{
+		public static void main(String[] args) 
+		{
+		int space=3;
+		int star=1;
+		for (char i='1'; i<='4';i++)
+		{
+			for (int x=1; x<=space; x++)
+			{
+				System.out.print(" ");
+			}
+			for (int y=1; y<=star; y++)
+			{
+				System.out.print("* ");
+			}
+			space--;
+			star++;
+			System.out.println(" ");
+		}
+		}
+		}
+	write a program for diag2
+	diag2
+	         1
+	      1  2  3
+	   1  2  3  4  5
+	1  2  3  4  5  6  7
+		class pg48 
+		{
+		public static void main(String[] args) 
+		{
+		int space=3;
+		int star=1;
+		for (char i='1'; i<='4';i++)
+		{
+			for (int x=1; x<=space; x++)
+			{
+				System.out.print(" ");
+			}
+			for (int y=1; y<=star; y++)
+			{
+				System.out.print(y);
+			}
+			space--;
+			star+=2;
+			System.out.println(" ");
+		}
+		}
+		}
+	write a program for diag3
+	diag3
+	     1
+	   2 3 4
+	 5 6 7 8 9
+		class pg49 
+		{
+		public static void main(String[] args) 
+		{
+		int num=1;
+		int space=2;
+		int star=1;
+		for (char i='1'; i<='3';i++)
+		{
+			for (int x=1; x<=space; x++)
+			{
+				System.out.print(" ");
+			}
+			for (int y=1; y<=star; y++)
+			{
+				System.out.print(num);
+				num++;
+			}
+			space--;
+			star+=2;
+			System.out.println(" ");
+		}
+		}
+		}
+	write a program for diag4
+	diag4
+		 1
+	      2     3
+	   4     5     6
+	7     8     9     10 
+		class pg50
+		{
+		public static void main(String[] args) 
+		{
+		int num=1;
+		int space=3;
+		int star=1;
+		for (char i='1'; i<='4';i++)
+		{
+			for (int x=1; x<=space; x++)
+			{
+				System.out.print(" ");
+			}
+			for (int y=1; y<=star; y++)
+			{
+				System.out.print(num + " ");
+				num++;
+			}
+			space--;
+			star++;
+			System.out.println(" ");
+		}
+		}
+		}
+	write a program for diag5
+	diag5	
+	        1 1
+	      1 2 2 1
+	    1 2 3 3 2 1
+	  1 2 3 4 4 3 2 1
+	1 2 3 4 5 5 4 3 2 1
+		class pg51
+		{
+		public static void main(String[] args) 
+		{
+		int space=4;
+		int star=1;
+		for (char i='1'; i<='5';i++)
+		{
+			for (int x=1; x<=space; x++)
+			{
+				System.out.print(" ");
+			}
+			for (int y=1; y<=star; y++)
+			{
+				System.out.print(y);
+			}
+			for (int z=star; z>=1; z--)
+			{
+				System.out.print(z);
+			}
+			space--;
+			star++;
+			System.out.println(" ");
+		}
+		}
+		}
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+30-07-2020
+
+when no. of loops r known for loop is used and while loop when it is not known while lopp is used
+in java if 2 integers r divided then quotient is only integer, for example 7/10, quotiient=0, reminder=7
+
+	write a pg to reverse given no 
+		class  pg52
+		{
+		public static void main(String[] args) 
+		{
+		int n=7469;
+		int rem=0;
+		int rev=0;
+		while (n!=0)
+		{
+			rem=n%10;
+			n=n/10;
+			rev=rev*10+rem;
+		}
+		System.out.println(rev);
+		}
+		}
+
+
+			general formula of reverse is (((rem*10)+rem)*10+rem) where rem- reminder
+			ist loop   2nd loop   3rd loop   4th loop
+			n 746      74         7          0
+			rem 9      6          4          7 
+			rev 9      96         964        9647
+
+
+
+	write a pg to check wheather given no. is pallindrome or not
+		class  pg53
+		{
+		public static void main(String[] args) 
+		{
+		int n=747;
+		int rem=0;
+		int rev=0;
+		int on=n;
+		while (n!=0)
+		{
+			rem=n%10;
+			n=n/10;
+			rev=rev*10+rem;
+		}
+        	if (on==rev)
+       		{
+			System.out.println("no. is pallindrome");
+        	}
+		else
+		{
+			System.out.println("no. is not pallindrome");
+		}
+		}
+		}
+
+
+	write a pg to find sum of each digit in a no
+		class  pg54
+		{
+		public static void main(String[] args) 
+		{
+		int n=492;
+		int rem=0;
+		int sum=0;
+		while (n!=0)
+		{
+			rem=n%10;
+			n=n/10;
+			sum=sum+rem;
+		}
+		System.out.println(sum);
+		}
+		}
+
+
+	write a pg to print factorial of each digit in no as n=536
+		
+
+
+		
+
+
+
+
+
+
+
+

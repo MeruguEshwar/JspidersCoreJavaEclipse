@@ -1,0 +1,1579 @@
+java august
+
+01-08-2020
+
+	write a program to check wheather given no is armstrong no or not
+	armstrong no example=153= 1^3+5^3+3^3=1+125+27=153, it is an armstrong no
+                              45= 4^2+5^2=16+25=41, it is not an armstrong no
+		class  pg55
+		{
+		public static void main(String[] args) 
+		{
+		int n=
+		int temp=n;
+		int power=0;
+		while (n!=0)
+		{
+			n=n/10;
+			power++;
+		}
+		n=temp;
+		int sum=0;
+		while (n!=0)
+		{
+			int rem=n%10;
+			int product=1;
+			for (int i=1; i<=power; i++)
+			{
+				product=product*rem;
+			}
+			sum=sum+product;
+			n=n/10;
+		}
+		n=temp;
+		if (n==sum)
+			{
+				System.out.println("armstrong no");
+			}
+		else
+			{
+				System.out.println("not an armstrong no");
+			}
+		}
+		}
+
+
+			int temp is to store original n value
+			earlier power is while (n!=0)
+					{n=n/10;
+					power++;} loop is to get power as 2 or 3 or something else 
+			n=temp; is to restore n value 
+			for (int i=1; i<=power; i++)
+			{product=product*rem;} is to get power times product of rem no
+			sum=sum+product; is to continues adding and getting addition of power no
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+05-08-2020
+
+string- zero/more characters r called string
+
+keywords:
+	inbuilt/predefined words r keywords
+	every keyword has meaning 
+	it must used be in lowercase
+	occurs in blue color on editplus
+
+list of keywords
+class
+publis 
+static 
+void
+int
+char
+boolean
+double
+if
+else
+elseif
+for
+while
+switch
+
+identifiers:
+	names given by developer
+	class name, variable name, method name
+	can contain A-Z, a-z, 0-9, $, _
+	can start with alphabet or symbol but cant start with no
+
+class naming format:
+	every word starting letter should be uppercase (pascal casing)
+		ex: Demo, Sample$, SjsProgram, TestTheProgram
+	
+variable naming format:
+	if there is only 1 word, entire word should be in lowercase
+	if there r multiple words, 1st word in lowercase, from 2nd word onwards 1st word uppercase (camel casing)		
+		ex: age, myAge
+
+hard code value- values will be given in program
+run time value- values will be asked during execution
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+06-08-2020
+
+read i/p during run time
+1) import scanner class
+	import java.util.Scanner;
+2) create an object of scanner class
+	Scanner scan= new Scanner(System.in);
+
+int a=scan.nextInt(); - to read int data
+double b=scan.nextDouble(); - to read decimal data
+boolean c=scan.nextBoolean(); - to read boolean data
+char z=scan.next().charAt(0); - to read single character
+String s1=scan.next(); - read string of 1 word
+String s2=scan.nextLine(); - read string of multiple words
+
+	write a program to read ur name, age, height, last letter of name and print it
+		/*wap to read ur name, age, height, last letter of name and print it*/
+		import java.util.Scanner;
+		class Pg57 
+		{
+		public static void main(String[] args) 
+		{
+			Scanner scan= new Scanner(System.in);
+    			System.out.println("enter ur name");
+    			String name=scan.next();
+			System.out.println("enter ur age");
+			int age=scan.nextInt(); 
+			System.out.println("enter ur height");
+			double height=scan.nextDouble(); 
+			System.out.println("enter last letter of ur name");
+    			char lastletter=scan.next().charAt(0);
+    			System.out.println("my info is :............");
+			System.out.println("name: "+name);
+			System.out.println("age: "+age);
+			System.out.println("height: "+height);
+			System.out.println("lastletter: "+lastletter);
+		}
+		}
+
+
+			/*wap to read ur name, age, height, last letter of name and print it*/ is single line comment which wont get execute
+
+
+	wap to check wheather is evn or odd
+		/*wap to check wheather is evn or odd*/
+		import java.util.Scanner;
+		class Pg58
+		{
+		public static void main(String[] args) 
+		{
+			Scanner scan= new Scanner(System.in);
+			System.out.println("enter the no");
+			int n=scan.nextInt(); 
+			if (n%2==0)
+			{
+				System.out.println("no is even no");
+			}
+			else
+			{
+				System.out.println("no is odd no");
+			}
+		}
+		}
+
+	
+	wap for multiplication table for any no
+		/*wap for multiplication table for any no*/
+		import java.util.Scanner;
+		class Pg59  
+		{
+		public static void main(String[] args) 
+		{
+			Scanner scan= new Scanner(System.in);
+			System.out.println("enter the no for multiplication table");
+			int n=scan.nextInt(); 
+			for (int k=1; k<=10; k++)
+			{
+				System.out.println(n+"*"+k+"="+(n*k));
+			}
+		}
+		}
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+07-08-2020
+
+string:
+	zero or more characters
+	""- empty/zero character string 
+method:
+	perfoming specific task
+	represented in ( )
+	result will be in left side 
+
+
+1) length method:
+	wap to count length of given string data
+		/*wap to count length of given string data*/
+		import java.util.Scanner;
+		class Pg60  
+		{
+		public static void main(String[] args) 
+		{
+			Scanner scan= new Scanner(System.in);
+			System.out.println("enter the string");
+			String s1=scan.next();
+			int res=s1.length();
+			System.out.println("length of the string is"+res);
+		}
+		}
+
+
+			here String s1=scan.next(); will find length of res and will store it in res
+
+
+2) charAt method:
+	every no has index no as like following example
+	s h u b h a m
+	0 1 2 3 4 5 6 
+	this will tell the char at given index/location value
+	wap to read char for required location
+		/*wap to read char for required location*/
+		import java.util.Scanner;
+		class Pg61 
+		{
+		public static void main(String[] args) 
+		{
+			Scanner scan= new Scanner(System.in);
+			System.out.println("enter the string");
+			String s1=scan.next();
+			System.out.println("enter the index no");
+			int index=scan.nextInt(); 
+			char res=s1.charAt(index);
+			System.out.println("character present at index "+index+" is "+res);
+		}
+		}
+
+
+3) index method:
+	wap a program to get index no for given character
+		/*wap a program to get index no for given character*/
+		import java.util.Scanner;
+		class Pg62 
+		{
+		public static void main(String[] args) 
+		{
+			Scanner scan= new Scanner(System.in);
+			System.out.println("enter the string");
+			String s1=scan.next();
+			System.out.println("enter the character");
+			char c=scan.next().charAt(0);
+			int res=s1.indexOf(c);
+			System.out.println("index no of given character "+c+" is "+res);
+		}
+		}
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+08-08-2020
+
+4) method:
+	when a letter occurs more than 1 time in a word then the 1st place of occurance will get detected from which we have to find next occurance
+	syntax:
+	int index= s1.indexOf('char');
+	int index= s1.indexOf(char, startIndex);
+		preoccIndex+1= preoccuring index+1
+		if 2nd occurance is not there then o/p will be -1
+
+5) method:
+	tells location from last occurance from last
+	syntax:
+	int index= s1.last.indexOf('char');
+
+6) method:
+	when a letter occurs more than 1 time in a word then the 1st place of occurance will get detected from last which we have to find previous occurance
+	syntax:
+	int index= s1.last.indexOf(char, index-1);
+	wap a program to get index no of char when occurs 2nd time from last 
+		/*wap a program to get index no of char when occurs 2nd time from last */
+		import java.util.Scanner;
+		class Pg63
+		{
+		public static void main(String[] args) 
+		{
+			Scanner scan= new Scanner(System.in);
+			System.out.println("enter the string");
+			String s1=scan.next();
+			System.out.println("enter the character");
+			char c=scan.next().charAt(0);
+			int res1=s1.lastIndexOf(c);
+			System.out.println("1st occurance of character from last is "+res1);
+	    		int res2=s1.lastIndexOf(c, res1-1);
+			System.out.println("2nd occurance of character from last is "+res2);
+		}
+		}
+
+
+7) method:
+	to get substring from a string
+	example:
+	String s1= "javadeveloper";
+	Sreing res= s1.substring(4,11);
+	sopln(s1);
+	sopln(res);
+		here we will get substring starting from 4 but ends at 10 since it is 11-1
+	wap to get substring from a string 
+		/*wap to get substring from a string */
+		import java.util.Scanner;
+		class Pg64
+		{
+		public static void main(String[] args) 
+		{
+			Scanner scan= new Scanner(System.in);
+			System.out.println("enter the string");
+			String s1=scan.next();
+			System.out.println("enter the starting pint");
+			int sp=scan.nextInt(); 
+			System.out.println("enter the end point");
+			int ep=scan.nextInt(); 
+			String res= s1.substring(sp,ep);
+	    		System.out.println("substring is "+res);
+		}
+		}
+
+
+8) method:
+	to get substring from a string
+	example:
+	String s1= "javadeveloper";
+	Sreing res= s1.substring(4);
+	sopln(s1);
+	sopln(res);
+		here we will get substring starting from 4 till end
+	wap to get substring from a string if only starting point is given
+		/*wap to get substring from a string if only starting point is given*/
+		import java.util.Scanner;
+		class Pg64
+		{
+		public static void main(String[] args) 
+		{
+			Scanner scan= new Scanner(System.in);
+			System.out.println("enter the string");
+			String s1=scan.next();
+			System.out.println("enter the starting pint");
+			int sp=scan.nextInt(); 
+			String res= s1.substring(sp);
+	    		System.out.println("substring is "+res);
+		}
+		}
+
+
+9) method:
+	wap to get substring until the end from given starting point
+		/*wap to get substring until the end from given starting point*/
+		import java.util.Scanner;
+		class Pg65
+		{
+		public static void main(String[] args) 
+		{
+			Scanner scan= new Scanner(System.in);
+			System.out.println("enter the string");
+			String s1=scan.next();
+			System.out.println("enter the starting pint");
+			int sp=scan.nextInt(); 
+			String res= s1.substring(sp);
+	    		System.out.println("substring is "+res);
+		}
+		}
+
+
+10) method:
+	syntax:
+	String s1= ;
+	String s2= s1.toUpperCase();
+	String s3= s1.toLowerCase();
+	wap to get uppercase and lowercase for given string
+		/*wap to get uppercase and lowercase for given string*/
+		import java.util.Scanner;
+		class Pg66
+		{
+		public static void main(String[] args) 
+		{
+			Scanner scan= new Scanner(System.in);
+			System.out.println("enter the string");
+			String s1=scan.next();
+			String s2= s1.toUpperCase();
+			String s3= s1.toLowerCase();
+			System.out.println("uppercase string is "+s2);
+			System.out.println("lowercase string is "+s3);
+		}
+		}
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+10-08-2020
+
+our own methods should start with AccessSpecifier followed by AccessModifier followed by ReturnType followed by MethodName()
+syntax:
+AccessSpecifier AccessModifier ReturnType MethodName()
+{
+
+}
+
+AccessSpecifier- wheather it is private or public method
+AccessModifier- wheather it is static or non-static
+ReturnType- void
+MethodName()- any name given by us   
+		class  Pg67
+		{
+		public static void main(String[] args) 
+		{
+			System.out.println("main starts");
+			walk();
+			System.out.println("main ends");
+		}
+		public static void walk()
+		{
+			System.out.println("walk a mile");
+		}
+		}
+	or
+		class  Pg67
+		{
+		public static void walk()
+		{
+			System.out.println("walk a mile");
+		}
+		public static void main(String[] args) 
+		{
+			System.out.println("main starts");
+			walk();
+			System.out.println("main ends");
+		}
+		}
+
+
+			public static void main(String[] args) is the main method which is must
+			public static void walk() is user defined method
+			walk(); is calling the method
+			main starts and main ends r not required
+
+
+		class Pg68 
+		{
+		public static void move()
+		{
+			System.out.println("move 5 km");
+		}
+		public static void run()
+		{
+			System.out.println("run 2 km");
+		}
+		public static void main(String[] args) 
+		{
+			System.out.println("main starts");
+			move();
+			run();
+			System.out.println("main ends");
+		}
+		}
+
+
+static method can call/refferenced/accessed static method directly while nonstatic can call nonstatic method
+classname objectname= new classname;
+		class  Pg69
+		{
+		public static void main(String[] args) 
+		{
+			System.out.println("main starts");
+			Pg69 obj= new Pg69();
+			obj.test();
+			System.out.println("main ends");
+		}
+		public void test()
+		{
+			System.out.println("in test method..............");
+		}
+		}
+
+
+			here objrepresents referrence variable
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+11-08-2020
+
+	wap to create 3 mehods as 
+	1) main method
+	2) static method
+	3) static method
+	where main method will call 1st static and 1st static will call 2nd static method
+		class Pg70 
+		{
+		public static void main(String[] args) 
+		{
+			System.out.println("main starts");
+			test1();
+        		System.out.println("main ends");
+		}
+		public static void test1()
+		{
+			System.out.println("test1 starts");		
+			test2();
+        		System.out.println("test1 ends");
+		}
+		public static void test2()
+		{
+			System.out.println("test2 starts");		
+			System.out.println("test2 ends");		
+		}
+		}
+	wap to create wap to create 3 mehods as 
+	1) main method
+	2) static method
+	3) non-static method
+	where main method will call static and static will call non-static method
+		class Pg71 
+		{
+		public static void main(String[] args) 
+		{
+			System.out.println("main starts");
+			test1();
+        		System.out.println("main ends");
+		}
+		public static void test1()
+		{
+			System.out.println("test1 starts");		
+			Pg71 sjs= new Pg71();
+			sjs.test2();
+        		System.out.println("test1 ends");
+		}
+		public void test2()
+		{
+			System.out.println("test2 starts");		
+			System.out.println("test2 ends");		
+		}
+		}
+	wap to create 3 mehods as 
+	1) main method
+	2) non-static method
+	3) non-static method
+	where main method will call 1st non-static method and 1st non-static method will call 2nd non-static method
+		class Pg72 
+		{	
+		public static void main(String[] args) 
+		{
+			System.out.println("main starts");	
+			Pg72 sjs= new Pg72();
+			sjs.test1();
+        		System.out.println("main ends");
+		}
+		public void test1()
+		{
+			System.out.println("test1 starts");		
+			test2();
+        		System.out.println("test1 ends");
+		}
+		public void test2()
+		{
+			System.out.println("test2 starts");		
+			System.out.println("test2 ends");				
+		}
+		}
+	wap to create 3 mehods as 
+	1) main method
+	2) non-static method
+	3) static method 
+	where main method will call non-static method and non-static method will call static method
+
+
+static method can call static method/variable directly
+non-static method can call non-static method/variable directly
+static method can call non-static method/variable by creating an object
+non-static method can call static method/variable directly
+
+local variables r created inside method
+global variable r created inside class
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+12-08-2020
+
+	wap to create 2 methods as main and static method, create local variable in each method and print it
+		class  Pg73
+		{
+		public static void main(String[] args) 
+		{
+			char a='s';
+			System.out.println(a);	
+			test();
+			double c=4.37;
+			System.out.println(c);	
+		}
+		public static void test()
+		{
+			int b=437;
+			System.out.println(b);	
+		}
+		}
+
+
+			a, b, c r local variables where a,c r of main and b is of test method
+
+
+local variable must be created and used
+under global variable 2 chatageries r there as
+	1) static variable
+	2) non-static variable
+	wap to create a static variable
+		class Pg74 
+		{
+		static double a=4.37;
+		public static void main(String[] args) 
+		{	
+			System.out.println(a);	
+		}
+		}
+	wap to create a non-static variable
+		class Pg74 
+		{
+		double a=4.37;
+		public static void main(String[] args) 
+		{
+			Pg74 sjs=new Pg74();
+			System.out.println(sjs.a);	
+		}
+		}
+	wap to create a static variable and non-static variable
+		class Pg74 
+		{
+		static char a='s';
+		int b=437;
+		public static void main(String[] args) 
+		{
+			System.out.println(a);	
+			Pg74 sjs=new Pg74();
+			System.out.println(sjs.b);
+		}
+		}
+
+
+sirs notes
+variable is memory which stores data
+variable properties r
+	1) name
+	2) type
+	3) data
+2 types of variable
+	1) local- declared inside scope of method
+		  access insideonly same method
+		  initialization is must before its usage, if not initialized compilation errors occur
+	2) global- declared inside scope of class
+		   access inside any method
+		   initialization is optional, if not initialized automatically its initialized to default values 
+		1) static
+		2) non-static
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+13-08-2020
+
+global variable default values
+int- 0
+double- 0.0
+char-  (empty char its a non printable char)
+String- null (its a printable char)
+boolean- false
+
+java file
+	class
+		global variable
+			static variable/class variable
+			non-static variable/instance variable
+		methods (local variable, statements)
+			static method/class method
+			non-static method/instance method
+
+method with argument
+	argument speaks about i/p of method
+	argument is a part of method signature
+	argument is nothing but variable declaration
+	syntax:
+		AccessSpecifier  AccessModifier  ReturnType  methodName(datatype variableName1, datatype variableName2, ...) 
+		{
+		operation
+		}
+			where AccessSpecifier  AccessModifier  ReturnType  methodName() is called as method signature/head
+			{  } is called as method implimentation/body
+	example:
+		class  demo
+		{
+		public static void main(String[] args) 
+		{
+			test(37);
+			demo d1=new demo();
+			d1 move(3.7);
+			walk('*', "sql");
+		}
+		public static void test(int a) 
+		{
+		}
+		public void move(double z)
+		{
+		}
+		public static void walk(char ch, String str)
+		{
+		}
+		}
+			where int a=37; double z=3.7; char ch='*'; String str="sql" values will get stored
+	wap to create a method to add 2 integers
+		class  Pg75
+		{
+		public static void main(String[] args) 
+		{
+			add(3, 7);
+		}
+		public static void add(int a, int b) 
+		{
+			System.out.println(a+b);
+		}
+		}
+	wap to perform simple interest for 2 months by rate 3.5 % on 1000 rs by using method with argument 
+		class  Ass34
+		{
+		public static void main(String[] args) 	
+		{
+			si(1000, 2, 3.5);
+		}
+		public static void add(int p, int t, double r) 
+		{
+			double res=(p*t*r)/100;
+			System.out.println("simple interest is :"+res);
+		}
+		}
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+14-08-2020
+
+method with return type
+steps
+	1) control goes to method
+	2) operation will be performed
+	3) produces o/p
+	4) returns o/p to method
+	5) assign the o/p to varible
+example
+	class demo
+	{
+	public static void main(String[] args) 
+	{
+	int res1 = test1 ();
+	double res2 = test2 ();
+	}
+	public static int test1 ()
+	{
+	operation
+	return 8;
+	}
+	public static double test2 ()
+	{
+	operation
+	return 9.2;
+	}
+
+
+		here test1/2 (); goes to public static int test1/2 ()
+		then operation will be performed and o/p (8 or 9.2) will be given
+		o/p will be returned to main method after end of loop
+		o/p will get assign to res1/2
+		here if void is used instead of int/double in public static int test1 (), then return is not required since it doesnt tell about datatype
+		here o/p will be either print or return based on program
+
+
+syntax for this method:
+	AccessSpecifier  AccessModifier  ReturnType  methodName(args/no args) 
+	{
+	operation
+	}
+
+	wap to perform simple interest for 2 months by rate 3.5 % on 1000 rs by using method with argument 
+		class  Pg76
+		{
+		public static void main(String[] args) 
+		{
+			double monthlyPay=si(1000, 2, 3.5);
+			System.out.println("simple interest for 2 months is: "+monthlyPay);
+		}
+		public static double si(int p, int t, double r) 
+		{
+			double res=(p*t*r)/100;
+			return res;
+		}
+		}
+	wap a program for following equation (a*a*a)+(b*b*b)=(a+b)*((a*a)+(b*b)-(a*b))
+		class Pg77 
+		{
+		public static void main(String[] args) 
+		{
+			int lhsres=lhs(3, 4);
+			int rhsres=rhs(3, 4);
+			System.out.println(lhsres+" = "+rhsres);
+		}
+		public static int lhs(int a, int b)
+		{	
+			int res= (a*a*a)+(b*b*b);
+			return res;
+		}
+		public static int rhs(int a, int b)
+		{
+			int res= (a+b)*((a*a)+(b*b)-(a*b));
+			return res;
+		}
+		}
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+17-08-2020
+
+	wap to check wheather given no is even or odd, if it is even, return true otherwise return false
+		import java.util.Scanner;
+		class Pg78 
+		{
+		public static void main(String[] args) 
+		{
+			Scanner scan= new Scanner(System.in);
+			System.out.println("enter the no");
+			int n=scan.nextInt();
+			boolean res=evenOdd(n);
+			System.out.println(res);
+		}
+		public static boolean evenOdd(int a)
+		{
+			if (a%2==0)
+			{
+				return true;
+			}
+			else
+			{
+			return false;
+			}
+		}
+		}
+	wap for following requirements
+	1) create add method to add 2 doubles and return the result, non-static method
+	2) subtract method for subtracting double and int and return the result
+	3) to perform divison of 2 int and return the reminder, non-static method
+	4) concat string and char and return the result
+	call all the methods from main method, receive the result and print it 
+		class  Pg79
+		{
+		public static void main(String[] args) 
+		{
+			Pg79 t1=new Pg79();
+			double res1=t1.addition(4.3, 3.7);
+			System.out.println("addition of 2 doubles is: "+ res1);
+			double res2=subtraction(43.7, 37);
+			System.out.println("subtraction of double and int is: "+ res2);
+			int res3=t1.division(37, 4);
+			System.out.println("remider of division of 2 int is: "+ res3);
+			String res4=concat("sarnaik", 's');
+			System.out.println("concat of string and char is: "+ res4);
+		}
+		public double addition(double a, double b) 
+		{
+			return a+b;
+		}
+		public static double subtraction(double c, int d) 
+		{
+			return c-d;
+		}
+		public int division(int e, int f) 
+		{
+			return e%f;
+		}
+		public static String concat(String g, char h) 
+		{
+			return g+h;
+		}
+		}
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+18-08-2020
+
+program is written in high level language (hll)
+
+cpu uses binary level language (bll)
+
+translator is a device which converts one language to another
+
+compiler converts entire program from hll to bll, this process is called as compilation
+	example c, c++
+
+interpreter converts hll to bll line by line, this proces is called interpretetion
+	example python, vb (bisual based) scripting
+
+cpu executes program
+
+compiler creates byte code which will be stored in class file
+	it is not in the form of binary as well as human readable language
+	it is in the form of numeric language
+
+compilation
+	program starts from java cod as filename.java
+	goes to java compiler and creates filename.class having bytecode
+	before compilation, compiler will check wheather the class is dependent on any another class or not 
+execution
+	ges to jvm (java virtual machine), an interpreter which sends it to cpu
+
+jre (java runtime environment) provides all basic needs 
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+19-08-2020
+
+in 1990 java was developed as java 1 (jdk 1.0)
+java 2 (jdk 1.2)
+java 3 (jdk 1.3)
+java 4 (jdk 1.4)
+java 5 (jdk 1.5)
+java 6 (jdk 1.6)
+java 7 (jdk 1.7)
+java 8 (jdk 1.8)- used by companies
+java 9 (jdk 1.9)
+java 10 (jdk 2.0)
+java 11 (jdk 2.1)
+java 12 (jdk 2.2)
+java 13 (jdk 2.2)
+java 14 (jdk 2.4)- march 2020
+
+3 varients of JDK
+1) J2SE- java to stanrd edition- core java
+2) J2EE- java to enterprise edition- advanced java
+3) J2ME- java to micro edition- elecronic devices
+
+developing multiple method with similar name but diff arguments is called method overloading
+		class Pg80 
+		{
+		public static void test(int a) 
+		{
+			System.out.println("in test with int arg");
+		}
+		public static void test(double a) 
+		{
+			System.out.println("in test with double arg");
+		}
+		public static void test(int a, double b) 
+		{
+			System.out.println("in test with int, double arg");
+		}
+		public static void main(String[] args) 
+		{
+			test(4.5);
+			test(6, 2.1);
+			test(99);
+		}
+		}
+
+
+rules (any 1 of them should be followed)
+	1) between overloaded methods no of arguments must be diff
+	2) between overloaded methods we can have same arguments but diff datatype
+	3) between overloaded methods we can have same no of arguments, sam datatype, but change the datatype position
+		
+		class Pg81 
+		{
+		public static void move(int a) 
+		{
+			System.out.println("move method of int arg....");
+		}
+		public static void move(int a, int b) 
+		{
+			System.out.println("move method of int, int arg....");
+		}
+		public static void move(int a, double b) 
+		{
+			System.out.println("move method of int, double arg....");
+		}
+		public static void move(double a, int b) 
+		{
+			System.out.println("move method of double, int arg....");
+		}
+		public static void main(String[] args) 
+		{
+			move(4, 5);
+			move(6, 2.1);
+			move(99);
+			move(1.2, 37);
+		}
+		}
+
+	wap for overloading staric and non-static method
+		class Ass36
+		{
+		public static void move(double a) 
+		{
+			System.out.println("move method of double arg....");
+		}
+		public void move(int a, int b) 
+		{
+			System.out.println("move method of int, int arg....");
+		}
+		public static void main(String[] args) 
+		{
+			Ass36 t1=new Ass36();
+			t1.move(4, 3);
+			move(99.9);
+		}
+		}
+	wap for overloading public and private method
+		class  Ass37
+		{
+		public static void test(int a) 
+		{
+			System.out.println("in test with int arg");
+		}
+    		private static void test(double a) 
+		{
+			System.out.println("in test with double arg");
+		}
+		public static void main(String[] args) 
+		{
+			test(99.9);
+			test(99);
+		}
+		}
+	wap for overloading main method main method
+		class  Ass38
+		{
+		public static void main(int a) 
+		{
+			System.out.println("in test with int arg");
+		}
+		public static void main(String[] args) 
+		{
+			main(99);
+		}
+		}
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+21-08-2020
+
+overloaded methods can have 
+	1) same or diff access specifier
+	2) same or diff access modifier
+	3) same or diff returntype
+	4) same or diff argument name
+	5) same argument name
+	6) diff argument list
+we go for overloading when we want to perform same operation for multiple ways
+overloading provides flexibality to perform operation in user desired manner
+
+
+		class Pg82 
+		{
+		public static int add(int a, int b) 
+		{
+			return a+b;
+		}
+		private static void add(int a, int b, int c) 
+		{
+			System.out.println(a+b+c);
+		}
+		public void add(int c, double d) 
+		{
+			System.out.println(c+d);
+		}
+		public static void main(String[] args) 
+		{
+			int res=add(3,4);
+			System.out.println(res);
+			add(3,4,7);
+			Pg82 t1=new Pg82();
+			t1.add(4,3.7);
+		}
+		}
+	wap to perform multiplication operation in 4 ways
+		class Pg83
+		{
+		public static int mul(int a, int b) 
+		{
+			return a*b;
+		}
+		private static void mul(int a, int b, int c) 
+		{
+			System.out.println(a*b*c);
+		}
+		public void mul(int c, double d) 
+		{
+			System.out.println(c*d);
+		}
+		public static void mul(double c, double d) 
+		{
+			System.out.println(c*d);
+		}
+		public static void main(String[] args) 
+		{
+			int res=mul(3,4);
+			System.out.println(res);
+			mul(3,4,7);
+			mul (3.7,0.4);
+			Pg83 t1=new Pg83();
+			t1.mul(4,3.7);
+		}
+		}
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+22-08-2020
+
+	wap to create a static, non-static variable and print it in main method
+		class  Pg84
+		{
+		static double a=4.37;
+		double b=3.7;
+		public static void main(String[] args) 
+		{
+			System.out.println(a);	
+			Pg84 sjs=new Pg84();
+			System.out.println(sjs.b);
+		}
+		}
+
+
+access			static method   static variable   nonstatic method   static variable
+static method           directly        directly          object             object 
+non-static method       directly        directly          directly           directly          
+
+see ss22aug1
+see ss22aug2
+see ss22aug3
+see ss22aug4
+
+	wap to create 2 static and 2 non-static variables and print it main method and draw execution diag
+		class  Ass39
+		{
+		static int i=50;
+		static char j='@';
+		double m=2.4;
+		int n=12;
+		public static void main(String[] args) 
+		{
+			System.out.println("main starts...");	
+			System.out.println(a);	
+			System.out.println(b);	
+			Ass39 sjs=new Ass39();
+			System.out.println(sjs.c);
+			System.out.println(sjs.d);
+			System.out.println("main ends...");	
+    		}
+		}
+see ss22aug5		
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+24-08-2020
+
+	wap to create static and non-static variables and print it main method 
+		class Pg85 
+		{
+		static double i=3.4;
+		int j=56;
+		public static void main(String[] args) 
+		{
+			System.out.println("main starts....");
+			System.out.println(i);
+			Pg85 r1=new Pg85();
+			Pg85 r2=new Pg85();
+			Pg85 r3=new Pg85();
+			System.out.println(r1.j);
+			System.out.println(r2.j);
+			System.out.println(r3.j);
+			System.out.println();
+			System.out.println("main ends...");
+		}
+		}
+
+
+			here r1, r2, r3 will create diff address 
+			we can have only 1 copy of static members (methods+variable) becoz class loader will execute only once for each class
+			we can multiple copies of non-static members (methods+variable) becoz we can create multiple obj 
+see ss24aug1
+
+
+object is also known as instance
+through obj also we can access static members  becoz every obj will be connected with static pool area
+see ss24aug2
+where spa= static pool area
+
+static variables/methods r called as class variables/methods since it belongs to whole class
+static variables/methods r loaded by class loader 
+any changes made in static variable it will affect whole class
+
+non-static variables/methods r called as instance variables/methods becoz it belongs to only itself
+any changes made in non-static variable it affects only current object
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+25-08-2020
+
+class and obj
+
+class is a blueprint or templet
+obj is a mirror image of the class
+
+class is a logical entity
+obj is real entity
+
+data members (variables), member fun (methods)
+
+if value of variable changes from obj to obj then declare that variable as non-static variable
+if the value of the variable remains same for the entire class then declare that variable as static variable
+
+if operartion depends on non-static variable then the operation is non-static method
+apart from these cases , for the operations, we can define either static/non-static method
+
+for example see ss25aug1 and ss25aug2
+where 's' in class stands for static 
+
+declare static variable and initialize 
+declare non-static variable but initialize using constructor
+
+compiler activity
+local variable must be initialized before its usage, if not comiler throws error
+global variable initialization is not mandatory, if not initialized, compiler will initialize default value  
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+26-08-2020
+
+constructor
+	its a special type of method, which gets executed during obj creation
+	constructor r called as new operatos
+	constructor is similar to className 
+	if program doesnt contains any constructor then compiler will define default constructor like
+		syntax of default constructor defined by compiler
+		className()
+		{
+	
+		}
+	no accessModifier in it
+	it is like local variable, unique
+	constuctors r undivided unlike methods which r divided in catagaries 
+	there is no returnType in it
+	only similarity bet method and constructor is that args r not mandatory in both of them
+
+works of new operator
+	create an obj
+	pick and load all non-static memebers (variables, method)
+	call the constructor
+	returns the value
+
+
+		class Pg86 
+		{
+		Pg86()
+		{
+			System.out.println("constructor");
+		}
+		public static void main(String[] args) 
+		{
+		    	Pg86 n1= new Pg86();
+		    	Pg86 n2= new Pg86();
+		    	Pg86 n3= new Pg86();
+		}
+		}
+
+
+	wap to get area of circle uing constructor 
+		class Pg87 
+		{
+		static double pi=3.14;
+		int r;
+		Pg87(int a)
+		{
+			r=a;
+		}
+		public void getArea() 
+		{
+			System.out.println("area of circle is " + pi*r*r);
+		}
+		public static void main(String[] args) 
+		{
+			Pg87 c1=new Pg87(4);
+			Pg87 c2=new Pg87(3);
+			Pg87 c3=new Pg87(7);
+			Pg87 c4=new Pg87(0);
+			c1.getArea();
+			c2.getArea();
+			c3.getArea();
+			c4.getArea();
+		}
+		}
+
+
+	wap to create parameter of rectangle 
+		class Ass40 
+		{
+		double length;
+		int bredth;
+		Ass40(double a, int b)
+		{
+			length=a;
+			bredth=b;
+		}
+		public void getPerimeter() 
+		{
+			System.out.println("perimeter of rectangle is " + 2*(length+bredth));
+		}
+		public static void main(String[] args) 
+		{
+			Ass40 r1=new Ass40(4.8, 3);
+			Ass40 r2=new Ass40(3.8, 7);
+			Ass40 r3=new Ass40(7.8, 4);
+			r1.getPerimeter();
+			r2.getPerimeter();
+			r3.getPerimeter();
+		}
+		}
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+27-08-2020
+
+	wap to create parameter of rectangle
+		class Ass40 
+		{
+		double length;
+		int bredth;
+		Ass40(double length, int bredth)
+		{
+			this.length=length;
+			this.bredth=bredth;
+		}
+		public void getPerimeter() 
+		{
+			System.out.println("perimeter of rectangle is " + 2*(length+bredth));
+		}
+		public static void main(String[] args) 
+		{
+			Ass40 r1=new Ass40(4.8, 3);
+			Ass40 r2=new Ass40(3.8, 7);
+			Ass40 r3=new Ass40(7.8, 4);
+			r1.getPerimeter();
+			r2.getPerimeter();
+			r3.getPerimeter();
+		}
+		}
+
+
+		here this. will show the present obj where it will increase the readability
+
+
+
+	wap to see account datails having int account num, string acc holder name, decimal balance and static mini balance
+		class Pg88 
+		{
+		int accNum;
+    		String accHolderName;
+		double balance;
+		static int miniBalance=500;
+		Pg88(int accNum, String accHolderName, double balance)
+		{
+			this.accNum=accNum;
+			this.accHolderName=accHolderName;
+			this.balance=balance;
+		}
+		public void seeAccDetails() 
+		{
+			System.out.println("************************************");
+			System.out.println("account datils are as follows");
+			System.out.println("account number is "+accNum);
+			System.out.println("account holder name is "+accHolderName);
+			System.out.println("balance of the account is "+balance);
+			System.out.println("minimum balance should be "+miniBalance);
+			System.out.println("************************************");
+		} 
+		public static void main(String[] args) 
+		{
+			Pg88 b1=new Pg88(1, "megha", 2212.69);
+			Pg88 b2=new Pg88(2, "jayant", 1406.69);
+			b1.seeAccDetails();
+			b2.seeAccDetails();
+		}
+		}
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+28-08-2020
+
+see ss28aug1, ss28aug2, ss28aug3
+here first veriables will be created in heap area from where info will come to stck area, executes and then exits
+finally info will be displayed 
+garbage collector will be called after complition of main method
+
+	wap to ss28aug4
+		class  Pg89	
+		{
+		static String javaTrainerName= "sunil";
+		static String javaBatchCode= "tecm17";
+		String name;
+		double tenth;
+		double inter;
+		double degree;
+		double masters;
+		Pg89(String name, double tenth, double inter, double degree, double masters)
+		{
+			this.name=name;
+			this.tenth=tenth;
+			this.inter=inter;
+			this.degree=degree;
+			this.masters=masters;
+		}
+		Pg89(String name, double tenth, double inter, double degree)
+		{
+			this.name=name;
+			this.tenth=tenth;
+			this.inter=inter;
+			this.degree=degree;
+		}
+		public void displayStdInfo() 
+		{
+			System.out.println("**********student information************");
+			System.out.println("training is going under mr. "+javaTrainerName);
+			System.out.println("with batch code : "+javaBatchCode);
+			System.out.println("student tenth   : "+tenth+"%");
+			System.out.println("student inter   : "+inter+"%");
+			System.out.println("student degree  : "+degree+"%");
+			if(masters !=0)
+			{		
+				System.out.println("student masters : "+masters+"%");
+			}
+			System.out.println("*****************************************");
+		}
+		public static void main(String[] args) 
+		{
+			Pg89 s0=new Pg89("shubham", 90, 91.5, 92.6);
+			Pg89 s1=new Pg89("megha", 80, 81.5, 82.6);
+			Pg89 s2=new Pg89("jayant", 75.1, 76.2, 77.3, 78.4);
+		/*after 3 years s1 will get masters*/
+			s1.masters=83.7;
+			s0.displayStdInfo();
+			s1.displayStdInfo();
+			s2.displayStdInfo();
+		}
+		}
+		
+
+			we have used method overloading for contructer 
+			in 2nd contructor 2, we have neglected masters for ppl who are not masters
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+31-08-2020
+
+dry principle- do not repeat yourself
+	rather than defining same code or repeating it again and instead reuse it
+
+for example
+		class  Ass41	
+		{
+		String color;
+		double l;
+		double b;
+		Ass41(double l, double b)
+		{
+			this.l=l;
+			this.b=b;
+		}
+		Ass41(double l, double b, String color)
+		{
+		this.l=l;
+		this.b=b;
+		this.color=color;
+		}
+		public void displayRectangleInfo() 
+		{
+			System.out.println("**********rectangle information************");
+			System.out.println("rectangle length    : "+l);
+			System.out.println("rectangle bredth    : "+b);
+			if(color !=null)
+			{		
+				System.out.println("rectangle color     : "+color);
+			}
+			System.out.println("*******************************************");
+		}
+		public static void main(String[] args) 
+		{
+			Ass41 s0=new Ass41(3, 4);
+			Ass41 s1=new Ass41(6, 7, "orange");
+			s0.displayRectangleInfo();
+			s1.displayRectangleInfo();
+		}
+		}
+
+
+instaed of repeating length, bredth initialisation we can call 1st constructor in another constuctor using this()
+this process is called as constuctor chaining in which constuctor calls another constuctor  
+here 'this' represents current obj while 'this()' represents current class constuctor  
+'this'- this statement
+'this()'- call to this statement
+so program with call to this statement is as 
+
+
+		class  Pg90	
+		{
+		String color;
+		double l;
+		double b;
+		Pg90(double l, double b)
+		{
+			this.l=l;
+			this.b=b;
+		}
+		Pg90(double l, double b, String color)
+		{
+			this(l,b);
+			this.color=color;
+		}
+		public void displayRectangleInfo() 
+		{
+			System.out.println("**********rectangle information************");
+			System.out.println("rectangle length    : "+l);
+			System.out.println("rectangle bredth    : "+b);
+			if(color !=null)
+			{		
+				System.out.println("rectangle color     : "+color);
+			}
+			System.out.println("*******************************************");
+		}
+		public static void main(String[] args) 
+		{
+			Pg90 s0=new Pg90(3, 4);
+			Pg90 s1=new Pg90(6, 7, "orange");
+			s0.displayRectangleInfo();
+			s1.displayRectangleInfo();
+		}
+		}
+
+
+purpose of constructor is to initialize instance variables (non-static variables)
+developing multiple constructors with diff args is called constructor overloading 
+constructor overloading, provides multiple ways to create obj
+constructor can invoke another constructor which is called as constructor chaining
+constructor chaining can be achieved by using 'call to this statement'
+	syntax: this();
+with the help of constructor chaining we can avoid repeatitive code bet the onstructors and achieve reusability bet onstructor 
+constructor ca chain with only one onstructor 
+'call to this staetment' must be 1st statement in the onstructor 
+
+
+
+static and non-static methods, variables
+
+access			static method   static variable   nonstatic method   static variable
+static method           directly        directly          object             object 
+non-static method       directly        directly          directly           directly  
+
+we can have only 'single copy of static members (methods, variables) since class loader will exceute only once for each class
+we can have multuple copies of non-static members (methods, variables) since developer can create multuple obj
+object is known as instance 
+through obj also we can access static memberssince every obj will be connected with static pool area
+static members r also called as class members (since entire class will have single copy of static members)
+non-static members r also called as instance members (since each instance will have its own copy of non-static members)
+any changes made to static members it effects the entire class
+any changes made to non-static members it effects only current class
+static members can be access in another class using classname
+non-static members can be access in another class using obj
+
+for accessing the variable from another class the following table helps
+access			static method   static variable   nonstatic method   static variable
+static method           classname       classname         object             object 
+non-static method       classname       classname         object             object 
+
+
+
+
+
+
+
+
+
+		
+
+

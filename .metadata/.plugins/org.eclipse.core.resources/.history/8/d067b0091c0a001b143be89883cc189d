@@ -1,0 +1,14 @@
+package inbuilt;
+
+public class ArrayEx2 
+{
+	public static void main(String argv[])
+	{
+		double d[]=new double[4];
+		
+		for(int i=0;i<=3;i++)
+		{
+			System.out.println(a[i]);
+		}
+	}
+}

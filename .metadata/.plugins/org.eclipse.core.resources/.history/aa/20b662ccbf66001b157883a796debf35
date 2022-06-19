@@ -1,0 +1,34 @@
+package org.jsp.app;
+
+
+													edaiouekhtueoida 
+													edeuoiakhtioeuda
+public class alp 
+{
+	public static void main(String[] args) 
+	{
+		String s1="edaiouekhtueoida";
+		String s2=" ";
+		
+		char ch= s1.charAt(i);
+		
+		if ((s1=='a') || (s1=="e") || (s1=="e") || (s1=="i") || (s1=="o") || (s1=="u"))
+		{
+			System.out.println(s2);
+		}
+		else
+		{
+			System.out.println("not a vowel");
+		}
+		
+	}
+}
+String s1 = "develop";
+String s2 = "s1.substring(1,s1.length()-1)";
+String s3 = reverse(s2);
+char ch1 = s1.charAt(0);
+char ch2 = s1.charAt(s1.length()-1);
+String s4=ch1+s3+ch2;
+System.out.println(s1);
+System.out.println(s2);
+		   

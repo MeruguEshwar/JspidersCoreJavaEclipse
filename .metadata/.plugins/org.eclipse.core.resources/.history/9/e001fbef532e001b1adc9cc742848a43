@@ -1,0 +1,25 @@
+package Basic;
+
+import java.util.Scanner;
+
+public class Prog3 
+{
+	public static void main(String[] args) 
+	{
+		Scanner scan = new Scanner(System.in);
+		System.out.println("Enter values");
+		int obj = scan.nextInt();
+		if(obj < 0)
+		{
+			throws new NumberNegativeException();
+		}
+		else if(obj > 0)
+		{
+			throws new NumberZeroException();
+		}
+		else
+		{
+			System.out.println("num");
+		}
+	}
+}

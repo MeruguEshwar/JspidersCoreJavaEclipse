@@ -1,0 +1,26 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="login.css"></link>
+	<head>
+	<body>
+		<strong><h>Library Managment System</h><strong>
+		<div id="abc">
+			<strong><p>UserName<p>
+			<input type="name" placeholder="UserName">
+			<br><br>
+			<p>PassWord<p>
+			<input type="name" placeholder="PassWord">
+			</strong>
+			<br><br>
+			<a href="main.html" id="xyz">Login</a> 
+			<br><br><br>
+			
+			<strong>
+				<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+       				<a href="forgot.html" id="xy"> <i class="fa fa-user-o">Lost your password?</a></i><br>
+				<br>
+			</strong>
+				<a href="SignIn.html" id="pq">Dont have an account?</a>
+		</div>
+	<body>
+<html>

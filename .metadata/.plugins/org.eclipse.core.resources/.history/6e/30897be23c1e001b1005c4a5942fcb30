@@ -1,0 +1,10 @@
+package Paterns;
+
+public class patrn8 
+{
+		public static void main(String[] args) 
+		{
+			System.out.println("Nani");
+		}
+}
+

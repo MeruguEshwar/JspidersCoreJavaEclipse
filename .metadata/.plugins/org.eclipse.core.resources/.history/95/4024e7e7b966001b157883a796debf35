@@ -1,0 +1,29 @@
+package org.jsp.app;
+
+import java.util.Scanner;
+
+public class Reverse 
+{
+	public static void main(String[] args) 
+	{
+		Scanner scan=new Scanner(System.in);
+		System.out.println("Enter The string");
+		String str=scan.next();
+		String s2=" ";
+		for(int i=0;i<=str.length()-1;i++)
+		{
+			char ch=str.charAt(i);
+			if ((ch=='a') || (ch=='e') || (ch=='i') || (ch=='o') || (ch=='u'))
+			{
+				s2=s2+ch;
+			}
+		}
+		System.out.println(s2);
+		String s3=" ";
+		for(int k=s2.length()-1;k>=0;k--)
+		{
+			s3=s3+s2.charAt(k);
+		}
+		System.out.println(s3);
+	}
+}

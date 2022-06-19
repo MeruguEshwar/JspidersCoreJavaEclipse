@@ -1,0 +1,19 @@
+package inbuilt;
+
+public class ArrayEx2
+{
+	public static void main(String argv[])
+	{
+		int a[]=new int[5];
+		int a[0]=1;
+		int a[1]=2;
+		int a[2]=3;
+		int a[3]=4;
+		int a[4]=5;
+		
+		for(int i=5;i>=0;i--)
+		{
+			System.out.println(a[i]);
+		}
+	}
+}

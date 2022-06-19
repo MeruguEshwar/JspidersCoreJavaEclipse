@@ -1,0 +1,28 @@
+package org.jsp.app;
+
+
+													edaiouekhtueoida 
+													edeuoiakhtioeuda
+public class alp 
+{
+	public static void main(String[] args) 
+	{
+		String s1="edaiouekhtueoida";
+		String s2=" ";
+		
+		for(int i=0;i<=s1.length()-1;i++)
+		{	
+			char ch= s1.charAt(i);
+		
+			if ((ch=='a') || (ch=='e') || (ch=='i') || (ch=='o') || (ch=='u'))
+			{
+				System.out.println(s2);
+			}
+			else
+			{
+				System.out.println("not a vowel");
+			}
+		}
+}
+
+		   

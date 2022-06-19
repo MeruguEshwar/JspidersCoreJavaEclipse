@@ -1,0 +1,1802 @@
+java september
+
+01-09-2020
+
+ass 
+	create a class and define static and non-static method
+ 		class  Ass42a
+		{	
+		public static void swim() 
+		{
+			System.out.println("swim across ocean");
+		}
+		public static void open() 
+		{
+			System.out.println("open the door");
+		}
+		}
+
+ass
+	create a class and define static and non-static variable
+		class Ass42b
+		{
+			static boolean x=true;
+			int y=89;
+		}
+ass
+	create a class and define static and non-static variable, method
+		class Ass42c
+		{
+			static double i=2.3;	
+			char j='@';
+		public static void push() 
+		{
+			System.out.println("push the door");
+		}
+		public void pull() 
+		{
+			System.out.println("pull the door");
+		}
+		}
+ass
+	call all the above pg
+		class  Ass42
+		{
+		public static void main(String[] args) 
+		{
+			System.out.println("**********accessed Ass42a members**********");
+			Ass42a.swim();
+			Ass42a a1=new Ass42a();
+			a1.open();
+			System.out.println("**********accessed Ass42b members**********");
+			System.out.println(Ass42b.x);
+			Ass42b b1=new Ass42b();
+			System.out.println(b1.y);
+			System.out.println("**********accessed Ass42c members**********");
+			System.out.println(Ass42c.i);
+			Ass42c.push();
+			Ass42c c1=new Ass42c();
+			System.out.println(c1.j);
+			c1.pull();
+		}
+		}
+
+
+buisness and user logic class
+	diff and multiple programs will be accessed using a single a program to make it easy
+	so only here main method is used
+
+super class- main class
+sub class- inherites/copies of super classes
+inheritence- process of super and sub class 
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+02-09-2020
+
+static variable can not be inherited bet super class and sub class
+non-static can not share same copy of variable so it will be inherited
+
+single level inheritence 
+	see ss2sept1
+	following r the programs for it
+	class a
+		class  Pg95a
+		{
+			int m;
+			double n;
+		Pg95a (int m, double n)
+		{
+			this.m=m;
+			this.n=n;
+		}
+		}
+	b class
+		class Pg94b extends Pg95a
+		{
+			double z;
+			Pg94b(int m, double n, double z)
+			{
+				super(m, n);
+				this.z=z;
+			}
+			public void info()
+			{
+				System.out.println(m);
+				System.out.println(n);
+				System.out.println(z);
+			}
+		}
+	main class
+		class  Pg95mainclass 
+		{
+		public static void main(String[] args) 
+		{
+			Pg94b d1= new Pg94b(4, 3.8, 7.8);
+			d1.info();
+		}
+		}
+
+
+multi level inheritence
+	see ss2sept2
+	class c
+		class Pg96c 
+		{
+			int x;
+			Pg96c(int x)
+			{
+				this.x=x;
+			}
+		}
+	class d
+		class Pg96d extends Pg96c 
+		{
+			int y;
+			Pg96d(int x, int y)	
+			{
+				super(x);
+				this.y=y;
+			}
+		}
+	clas e
+		class Pg96e extends Pg96d
+		{
+			int z;
+			Pg96e(int x, int y, int z)
+			{
+				super(x, y);
+				this.z=z;
+			}
+			public void info()
+			{	
+				System.out.println(x);
+				System.out.println(y);
+				System.out.println(z);
+			}
+		}
+	main class
+		class Pg96mainclass 
+		{
+			public static void main(String[] args) 
+			{
+				Pg96e e1=new Pg96e(4, 3, 7);
+				e1.info();
+		}
+		}
+
+
+hirarchical inheritence
+	see ss2sept3
+	class f
+		class  Pg97f
+		{
+			double m;
+			Pg97f(double m)
+			{
+				this.m=m;
+			}
+		}
+	class g
+		class  Pg97g extends Pg97f
+		{
+			int n;	
+			Pg97g(double m, int n)
+			{
+				super(m);
+				this.n=n;
+			}
+			public void info()
+			{
+				System.out.println(m);
+				System.out.println(n);
+			}
+		}
+	class h
+		class Pg97h extends Pg97f 
+		{
+			int o;
+			Pg97h(double m, int o)
+			{
+				super(m);
+				this.o=o;
+			}
+			public void info()
+			{
+				System.out.println(m);
+				System.out.println(o);
+			}
+		}
+	main class
+		class Pg97mainclass 
+		{
+			public static void main(String[] args) 
+			{
+				Pg97g g1 =new Pg97g(3, 7);
+				Pg97h h1 =new Pg97h(4,8);
+				g1.info();
+				h1.info();
+			}
+		}
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+03-09-2020
+
+if there is inheritence in classes then constructor chaining is compulsory (call to uper class)
+it is of 2 types
+	implicit- automatically compiler will do, developer wont involves, super class contains default args
+	explicit- developer has to handle it, super class contains constructor with args
+
+
+implicit- here arg is not used
+	class x
+		class Pg98x 
+		{
+		Pg98x()
+		{
+			System.out.println("x class default");
+		}
+		}
+	class y
+		class Pg98y extends Pg98x
+		{
+		Pg98y()
+		{
+			System.out.println("y class default");
+		}
+		}
+	main class
+		class Pg98mainclass 
+		{
+		public static void main(String[] args) 
+		{
+			Pg98y y1= new Pg98y();
+		}
+		}
+			here super is not used which will be done automatically
+
+explicit- here arg is passed
+	class p
+		class Pg99p 
+		{
+		Pg99p(int i)
+		{
+			System.out.println("p class constructor");
+		}
+		}
+	class q
+		class Pg99q extends Pg99p
+		{
+		Pg99q()
+		{
+			super(8);
+			System.out.println("q class constructor");
+		}
+		}
+	main class
+		class Pg99mainclass 
+		{
+		public static void main(String[] args) 
+		{
+			Pg99q q1= new Pg99q();
+		}
+		}
+
+
+		class m
+		{
+		
+		}
+		and
+		class n
+		{
+
+		}
+can get chained since compiler will do it
+
+
+multiple inheritence
+	multiple sub and single super class
+	because of diamond problem this inheritence is not possible in java 
+	see ss3sept1
+	ambiguity in chaining 
+		class a
+		{
+			a{}
+		}
+		class b
+		{
+			b{}
+		}
+		class c extend class a, b
+		{
+			c()
+			{ 
+				super()
+			}
+		}
+	ambiguity in exeution of method implementation 
+		class a
+		{
+		public void move()
+		{sopln(.....);}
+		}
+		class b
+		{
+		public void move()
+		{sopln(.....);}
+		}
+		class c extend class a, b
+		{
+			public void move()
+			{ 
+			{sopln(.....);}
+			}
+		}
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+04-09-2020
+
+see ss3sept2 assignment
+	account
+		class  Ass43account
+		{
+		static String bankname="icic";
+		int accNum;
+		String accHolderName;
+		double accBal;
+		Ass43account(int accNum, String accHolderName, double accBal)
+		{	
+			this.accNum=accNum;
+			this.accHolderName=accHolderName;
+			this.accBal=accBal;
+		}
+		public void details()
+		{
+			System.out.println("*******************");
+			System.out.println("account number is "+accNum);
+			System.out.println("account holder name is "+accHolderName);	
+			System.out.println("account balance is "+accBal);
+			System.out.println("*******************");
+		}
+		}
+	saving account
+		class Ass43saving extends Ass43account
+		{		
+		int minBal;
+		Ass43saving(int accNum, String accHolderName, double accBal, int minBal)
+		{
+			super(accNum, accHolderName, accBal);
+			this.minBal=minBal;
+		}
+		public void displayAccountDetails()
+		{
+			System.out.println("*******************");
+			details();
+			System.out.println("minimum balance is "+minBal);
+			System.out.println("*******************");
+		}
+		}
+	salary account
+		class Ass43salary extends Ass43account
+		{
+		String companyName;
+		Ass43salary(int accNum, String accHolderName, double accBal, String companyName)
+		{
+			super(accNum, accHolderName, accBal);
+			this.companyName=companyName;
+		}
+		public void displayAccountDetails()
+		{
+			System.out.println("*******************");
+			details();
+			System.out.println("minimum balance is "+companyName);
+			System.out.println("*******************");
+		}
+		}
+	main class
+		class Ass43mainclass 
+		{
+		public static void main(String[] args) 
+		{
+			Ass43saving s1= new Ass43saving(37, "sjs", 4378, 1000);
+			Ass43salary s2= new Ass43salary(32, "tld", 4328, "dfa");
+			s1.displayAccountDetails();
+			s2.displayAccountDetails();
+		}
+		}
+	see ss3sept1
+
+
+Summary of Inheritance
+
+1. Inheriting members of one class to another class is called inheritance.
+2. Inheritance can be achieved by using a keyword extends.
+3. During Inheritance, Constructor chaining is mandatory.
+4. Constructor chaining can happen in 2 ways.
+	a. Implicit Way:If super class contains default constructor
+			then compiler will define call to super statement without any argument in sub class constructor. 
+			Hence Constructor Chaining is implicit in nature.
+	b. Explicit Way:If super class contains Constructor with arguments
+			then developer will define call to super statement with proper argument in sub class constructor.
+			Hence Constructor Chaining is explicit in nature.
+5. Only non-static members can be inherited.
+6. Static members cannot be inherited, coz of its single copy nature. But single copy is shared to super class as well as subclass.
+7. There are 4 types of Inheritance
+	a. Single level heritance
+	b. Multilevel inheritance
+	c. Hierarchical Inheritance [Single Super class with multiple subclasses] 
+	d. Multiple Inheritance[Single Subclass with multiple super classes]
+8. Multiple inheritance cannot be achieved using classes, coz of "DIAMOND PROBLEM"
+9. DIAMOND PROBLEM
+	a. Ambiguity in Constructor Chaining
+	b. Ambiguity in Execution of Method Implementation
+10. We go for Inheritance to achieve "REUSABILITY BETWEEN THE CLASSES" Le define Repetitive code] 
+    Same code/Duplicate Code/Common code within superclass and reuse it in all the subclasses.
+
+Nptel: Define Common Code is Superclass 
+Note2: Define Specific Code in Subclass
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+05-09-2020
+
+see ss4sept1
+	shape class
+		class Ass44shape 
+		{
+		public void spin() 
+		{
+			System.out.println("clockwise");
+		}
+		}
+	smile class
+		class Ass44smile extends Ass44shape 
+		{
+		public static void main(String[] args) 
+		{ }
+		}
+	star class
+		class Ass44star extends Ass44shape 
+		{
+		public static void main(String[] args) 
+		{ }
+		}
+	triangle class
+		class Ass44triangle extends Ass44shape 
+		{
+		public void spin() 
+		{
+			System.out.println("anti-clockwise");
+		}
+		}
+	rectangle class
+		class Ass44rectangle extends Ass44shape 
+		{
+		public static void main(String[] args) 
+		{ }
+		}
+	circle class
+		class Ass44circle extends Ass44shape 
+		{
+		public static void main(String[] args) 
+		{ }
+		}
+	main class
+		class Ass44mainclass 
+		{
+		public static void main(String[] args) 
+		{
+			Ass44shape rv1= new Ass44shape();
+			Ass44smile rv2= new Ass44smile();
+			Ass44star rv3= new Ass44star();
+			Ass44rectangle rv4= new Ass44rectangle();
+			Ass44circle rv5= new Ass44circle();
+			rv1.spin();
+			rv2.spin();
+			rv3.spin();
+			rv4.spin();
+			rv5.spin();
+		}
+		}
+
+
+Summary of Method Overriding
+
+1. During inheritance process, subclass can change method implementation of inherited method, this process is called method overriding.
+2. Method Overriding depends on 2 factors:
+	a Inheritance is must
+	b. Method signature must be same.
+3 Method overriding, helps to change implementation of inherited method, for a particular subclass, without effecting other subclasses
+
+Note 1: Only non-static method can be overridden
+Note 2: Static methods cannot be overridden
+
+2 types of methods
+	1) complete/concrete method-    has method signature/head as well as method body
+	2) incomplete/abstract method-  has only method signature
+					method has ';'
+					uses ketword called abstract
+					also class should be declared as abstract
+
+
+incomplete/abstract method example 
+example 1
+	demo class
+		abstract class Pg100demo
+		{
+			abstract public void test();
+		}
+	sample class
+		class Pg100sample extends Pg100demo
+		{
+		public void test()
+		{
+			System.out.println("Hello World!");
+		}
+		}
+	main class
+		class Pg100mainclass 
+		{
+		public static void main(String[] args) 
+		{
+			Pg100sample s1= new Pg100sample();
+			s1.test();
+		}
+		}
+
+
+example 4
+	a class
+		abstract class Pg101a
+		{
+			abstract public void move();
+			abstract public void walk();
+		}
+	b class
+		class Pg101b extends Pg101a
+		{
+		public void move()
+		{
+			System.out.println("move");
+		}
+		public void walk()
+		{
+			System.out.println("walk");
+		}
+		}
+	main class
+		class Pg101mainclass 
+		{
+		public static void main(String[] args) 
+		{
+			Pg101b	s1= new Pg101a();
+			s1.move();
+			s1.walk();
+		}
+		}
+
+
+example 3
+	m class
+		abstract class Pg102m
+		{
+			abstract public void swim();
+			public void cycle()
+			{
+				System.out.println("cycle 3 km");
+			}
+		}
+	n class
+		class Pg102n extends Pg102m
+		{	
+		public void swim()
+		{
+			System.out.println("swim");
+		}
+		}
+	main class
+		class Pg102mainclass 
+		{
+		public static void main(String[] args) 
+		{
+			Pg102n s1= new Pg102n();
+			s1.swim();
+			s1.cycle();
+		}
+		}
+
+
+example 4
+	a class
+		abstract class Pg101a
+		{
+			abstract public void move();
+		}
+	b class
+		abstract class Pg101b extends Pg101a
+		{
+		}
+	c class
+		class Pg101c extends Pg101b
+		{
+		public void move()
+		{
+			System.out.println("move");
+		}
+		}
+	main class
+		class Pg101mainclass 
+		{
+		public static void main(String[] args) 
+		{
+			Pg101c	s1= new Pg101c();
+			s1.move();
+		}
+		}
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+07-09-2020
+
+Abstract 
+
+1. Abstract is a keyword, which represents incompleteness.
+2. Abstract keyword can be used on method and class.
+3. Abstract method will have only "METHOD SIGNATURE".
+4. If class contains at least one abstract method, then entire class should be declared as abstract.
+5. If class a inherits abstract method, then subclass will have 2 choice.
+	a. Override the method, subclass becomes complete class
+	b. Don't Override the method, subclass becomes abstract class.
+6. In order use/execute abstract method, it must completed / overridden / implemented.
+7. Abstract class cannot be instantiated.
+8. By defining an abstract method, we can make sure that, every subclass will maintain standard method signature.
+
+constant 		
+		class Pg103
+		{
+		public static void main(String[] args) 
+		{
+			final int a=23;
+			a=56;
+			System.out.println(a);
+		}
+		}
+
+
+			final keyword represents that the variable is a constant, with final reinitialization is not possible
+
+
+Final
+
+1. Final is keyword, which represents "No Changes / End
+2. Final keyword can be used with Variable, Method, Class
+3: Final variables cannot be initialized constant variable
+4. Final method can be inherited, but cannot be overridden
+5. Final class cannot have a subclass / final cannot be inherited further
+
+
+	father class
+		class  Pg104father
+		{
+		final public void marry() 
+		{
+			System.out.println("arranged marriage");
+		}
+		}
+	son class
+		class Pg104son extends Pg104father
+		{
+		public void marry() 
+		{
+			System.out.println("love and arrange marriage");
+		}
+		}
+
+
+(class - inheritence 
+method - override
+final - reinitialization)
+
+
+Method Overriding
+
+1. During inheritance process, subclass can change method implementation of inherited method. This process is called method overriding,
+2. Method Overriding depends on
+	a Inheritance is must 2 factors:
+	b. Method signature must be same.
+3. Method overriding, helps to change implementation of inherited method, for a particular subclass, without effecting other subclasses.
+Note l: Only non-static method can be overridden. 
+Note 2: Static methods cannot be overridden.
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+08-09-2020
+
+all static methods r complete methods
+non-static methods r either complete methods or incomplete/abstract methods
+
+interface 
+	syntax:
+	interface interfaceName 
+	{
+		final static variable
+		abstract public methods
+	}
+	non-static variables, complete methods(static or non-static method), constructors r not aloowed in interface 
+
+allows only incomplete/abstract method
+		abstract interface Pg105run1
+		{
+			abstract public void test(); 
+		}  
+did not get any error since it is an incomplete method
+		
+		interface Pg105run2
+		{
+			public void test(); 
+		}  
+if we wont use keyword abstract then it will be incomplete by default 
+		
+		interface Pg105run3
+		{
+		public void test()
+		{
+			System.out.println("Hello World!");
+		}
+		} 
+gets error since it has body means it is a complete program 
+		
+	interface 
+		interface Pg105sample
+		{
+			void test();
+		} 
+	implimentation
+		class Pg105demo implements Pg105sample
+		{
+		public void test()
+		{
+			System.out.println("Hello World!");
+		}
+		}	 
+	main class
+		class Pg105mainclass 
+		{
+		public static void main(String[] args) 
+		{
+			Pg105demo d1= new Pg105demo();
+			d1.test;
+		}
+		}
+see ss8sept1
+
+	run class
+		interface Pg106run
+		{
+			int a=25; 
+		} 
+	main class
+		class  Pg106mainclass
+		{
+		public static void main(String[] args) 
+		{
+			System.out.println(Pg106run.a);
+		}
+		}
+
+
+Go to interface, and make all the methods by default as public abstract.
+Go to interface, and make all the variables by default as final static.
+ 
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+09-09-2020
+
+see ss8sept2
+	sample 1
+		interface Ass45sample1 
+		{
+			void test1();
+		}
+	sample 2
+		interface Ass45sample2 extends Ass45sample1
+		{
+			void test2();
+		}  
+	demo 1
+		class Ass45demo1 implements Ass45sample2
+		{
+		public void test1() 
+		{
+			System.out.println("test 1");
+		}
+		public void test2() 
+		{
+			System.out.println("test 2");
+		}
+		}
+	main class
+		class Ass45mainclass 
+		{
+		public static void main(String[] args) 
+		{
+			Ass45demo1 d1= new Ass45demo1();
+			d1.test1();
+			d1.test2();
+		}
+		}
+
+
+see ss8sept3
+	sample 3
+		interface Ass46sample3
+		{
+			void test3();
+		}
+	demo 2
+		class Ass46demo2 implements Ass46sample3 
+		{
+		public void test3() 
+		{
+			System.out.println("test 3 Ass46demo2");
+		}
+		}
+	demo 3
+		class  Ass46demo3 implements Ass46sample3
+		{
+		public void test3() 
+		{
+			System.out.println("test 3 Ass46demo3");
+		}
+		}
+	main class
+		class Ass46mainclass 
+		{
+		public static void main(String[] args) 
+		{
+			Ass46demo2 d2= new Ass46demo2();
+			Ass46demo3 d3= new Ass46demo3();
+			d2.test3();
+			d3.test3();
+		}
+		}
+
+
+see ss8sept4
+	sample 4
+		interface Ass47sample4 
+		{
+			void test4():
+		}
+	sample 5
+		interface Ass47sample5 
+		{
+			void test5():
+		}
+	sample 6
+		interface Ass47sample6  extends Ass47sample4, Ass47sample5
+		{
+			void test6();
+		}
+	demo 4
+		class Ass47demo4 
+		{
+		public void test4() 
+		{
+			System.out.println("tset 4 Ass47demo4");
+		}
+		public void test5() 
+		{
+			System.out.println("tset 5 Ass47demo4");
+		}
+		public void test6() 
+		{
+			System.out.println("tset 6 Ass47demo4");
+		}
+		}
+	main class
+		class Ass47mainclass 
+		{
+		public static void main(String[] args) 
+		{
+			Ass47demo4 d4= new Ass47demo4();
+			d4.test4();
+			d4.test5();
+			d4.test6();
+		}
+		}
+
+
+see ss8sept5
+	sample 7
+		interface Ass48sample7 
+		{
+			void test7();	
+		}
+	sample 8
+		interface Ass48sample8
+		{
+			void test8();	
+		}
+	sample 9
+		interface Ass49sample9
+		{
+			void test9();
+		}  
+	demo 5
+		class Ass48demo5 implements Ass48sample7, Ass48sample8
+		{
+		public void test7() 
+		{
+			System.out.println("test 7 Ass48demo5");
+		}
+		public void test8() 
+		{
+			System.out.println("test 8 Ass48demo5");
+		}
+		}
+	main class
+		class Ass48mainclass 
+		{
+		public static void main(String[] args) 
+		{
+			Ass48demo5 d5= new Ass48demo5();
+			d5.test7();
+			d5.test8();
+		}
+		}
+
+
+see ss8sept6
+	sample 9
+		interface Ass49sample9
+		{
+			void test9();
+		} 
+	sample 10
+		class Ass49sample10
+		{
+		public void test10()
+		{
+			System.out.println("test 10");
+		}
+		}  
+	demo 6
+		class Ass49demo6 extends Ass49sample10 implements Ass49sample9
+		{
+		public void test9() 
+		{
+			System.out.println("test 9 Ass49demo6");
+		}
+		}
+	main class
+		class Ass49mainclass 
+		{
+		public static void main(String[] args) 
+		{
+			Ass49demo6 d6= new Ass49demo6();
+			d6.test9();
+			d6.test10();
+		}
+		}
+
+
+Interface
+
+1. Interface its self is by default abstract.
+2. In interface all the methods are by default abstract and public.
+3. In interface all the variables are static and final.
+4. In interface, Non-static variable, constructors, complete methods are not allowed.
+5. In order to use interface methods, it must be implemented. 
+6. Multiple inheritance is possible with interface, coz there is no diamond problem.
+	a There is no constructor. Hence, no ambiguity in constructor chaining
+	b. There is no implementation for methods. Hence no ambiguity in execution of method implementation.
+
+Note:
+	1. class implements interface
+	2 class implements multiple interface
+	3. class can extends class and implements interface 
+	4. interface extends interface
+	5 interface can extends multiple interface
+	6. interface can be implemented by multiple classes
+
+Very Important Point:
+Interface guarantees that all the implementation class will maintain same method signature during implementation.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------10-09-2020
+
+upcasting- 
+	conversion of sub class obj to super class obj since subclass has properties of both super as well as sub class
+	it hides sub class properties when it converts in super class
+downcasting-
+	when obj returns to sub class from super class
+	when obj is sub class it has properties of both super as well as sub class
+
+see ss10sept1 
+
+subclass level [B] --- A a1= (A) new B(); --- superclass level [A] --- B b1= B() a1; --- subclass level [B] 
+                       upcasting              a1.test1()               downcasting       b1.test1();
+                                                                                         b2.test2();
+
+	class a
+		class Pg107a
+		{
+		public void test1() 
+		{
+			System.out.println("test1");
+		}
+		}
+	class b
+		class  Pg107b extends Pg107a
+		{
+		public void test2() 
+		{
+			System.out.println("test2");
+		}
+		}
+	main class
+		class Pg107mainclass 
+		{
+		public static void main(String[] args) 
+		{
+			Pg107a a1= (Pg107a) new Pg107b();
+			a1.test1();
+			Pg107b b1= (Pg107b) a1;
+			b1.test1();
+			b1.test2();
+		}
+		}
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+11-09-2020
+
+see ss11sept1
+	demo class
+		class Pg108demo 
+		{
+		public void move() 
+		{
+			System.out.println("move");
+		}
+		}
+	sample class
+		class Pg108sample extends Pg108demo
+		{
+		public void walk() 
+		{
+			System.out.println("walk");
+		}
+		}
+	test class
+		class Pg108test extends Pg108demo
+		{
+		public void run() 
+		{
+			System.out.println("run");
+		}
+		}
+	main class
+		class Pg108mainclass
+		{
+		public static void main(String[] args) 
+		{
+			Pg108demo s1= (Pg108demo) new Pg108sample();
+			s1.move();
+			Pg108sample s2= (Pg108sample) s1;
+			s2.move();
+			s2.walk();
+			Pg108demo s3= (Pg108demo) new Pg108test();
+			s3.move();
+			Pg108test s4= (Pg108test) s3;
+			s4.move();
+			s4.run();
+		}
+		}
+
+
+method binding
+	connecting method signature with method body
+	its a back end process 
+	its possible for non-static elements
+
+compile time binding/static binding/early binding 
+	during coding stage methods are not binded, compiler do its binding so called as compile time
+	it lasts foreever or binding is fixed so called as static binding
+	it happens before execution so called as early binding 
+	see ss11sept2
+
+run time binding/dynamic binding/late binding
+	bining happens while execution if obj is created so called as run time binding
+	binding changes from one implimentation to another implimentation so called as dynamic binding
+	see ss11sept3	
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+14-09-2020
+
+Object type casting
+
+1. Converting one object type to another object type is called object typecasting.
+2. There are 2 types
+	a. Upcasting
+	b. Downcasting
+3. Converting sub class object to super class object is called upcasting
+4. When object is upcast, sub class properties are hidden, super class properties are visible.
+5. Upcasting is possible, because sub class object will have properties of super class. 
+6. Upcasting is implicit in nature, because every sub class will have only one super class. Hence, subclass object can automatically behave like super class.
+7. Converting super class object back to sub class object is called downcasting.
+8. Downcasting is possible, only if object is upcasted.
+9. When object is downcasted, hidden sub class properties becomes visible.
+10. Downcasting is explicit in nature, because single super class can have multiple subclass. Hence, developer must explicitly specify the subclass type to convert.
+Note : Object type casting is possible, only if there is an inheritance.
+
+
+Method binding
+
+1. Connecting method signature with method implementation is called method binding.
+2. During coding stage, methods are only defined, but methods are not bound.
+3. Method binding occurs in 2 stages
+	a. During compile time
+	b. During run time
+4. If methods are bound during program compilation, it's called compile time binding static binding/early binding.
+5. Note: Since binding between method signature and body cannot be changed. Hence it's called static binding.
+6. Note: Since JVM already knows in advance before execution, for which signature, which method body will be executed. Hence it's called early binding.
+7. If methods are bound, during program execution, it's called run time binding/dynamic binding/late binding. 
+8. Note: Since binding changes from one implementation to another implementation based on object creation. Hence it's called dynamic binding.
+9. Note: Since JVM does not knows in advance before execution, for which signature, which creation. Hence it's called late binding. Method body will be execute.
+10. For run time binding condition is object creation. Late binding is decided during run time, based on the object creation.
+11. Static method are bound, during compile time.
+12. Non static method are bound, during run time.
+
+
+Class diagram
+
+Pictorial representation of our program
+For basic syntax see ss14sept1
+
+association
+
+is a relationship
+see ss14sept2
+
+has A relationship 
+see ss14sept3
+
+see 14sept4
+	battery class
+		class Pg109battery 
+		{
+		int capacity;
+		double chargeVoltage;
+		Pg109battery(int capacity, double chargeVoltage)
+		{
+			this.capacity= capacity;
+			this.chargeVoltage= chargeVoltage;
+		}
+		public void givePower() 
+		{
+			System.out.println("givePower");
+		}
+		public void storePower() 
+		{
+			System.out.println("storePower");
+		}
+		public void discharge() 
+		{
+			System.out.println("discharge");
+		}
+		}
+	sim class
+		class Pg109sim 
+		{
+		String brandName;
+		String chipSize;
+		String simType;
+		String simNo;
+		Pg109sim(String brandName, String chipSize, String simType, String simNo)
+		{
+			this.brandName= brandName;
+			this.chipSize= chipSize;
+			this.simType= simType;
+			this.simNo= simNo;
+		}
+		public void supportsCalling() 
+		{
+			System.out.println("Helps to call");
+		}
+		public void supportsTexting() 
+		{
+			System.out.println("Helps to text");
+		}
+		}
+	mobile class
+		class Pg109mobile
+		{
+		String brandName;
+		double cameraPixel;
+		Pg109battery b= new Pg109battery(2600, 4.37);
+		Pg109sim s= new Pg109sim("airtel", "micro", "4g", "+91-6281742586");
+		Pg109mobile(String brandName, double cameraPixel) 
+		{
+			this.brandName= brandName;
+			this.cameraPixel= cameraPixel;
+		}
+		public void call()
+		{
+			s.supportsCalling();
+			b.discharge();
+		}
+		public void message()
+		{
+			s.supportsTexting();
+			b.discharge();
+		}
+		}
+	main class
+		class Pg109mainclass 
+		{
+		public static void main(String[] args) 
+		{
+			Pg109mobile m1= new Pg109mobile("jio", 10.2);
+			m1.call();
+			m1.message();
+		}
+		}
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------ 
+
+21-09-2020
+
+1. Process of developing a method, which can handle only "SINGLE TYPE OF OBJECT" is called specialization. The method is called specialized method.
+2. Specialized method will have argument of subclass reference variable/implementation class reference variable.
+3. Process of developing a method, which can handle " MULTIPLE TYPE OF OBJECT OF PARTICULAR CATOGERY" is called generalization. The method is called generalized method.
+4. Generalized method will have argument of superclass reference variable/interface reference variable.
+5. In generalization always upcasting happens
+
+	shape class
+		class Pg110shape 
+		{
+		public void rotate() 
+		{
+			System.out.println("rotate");
+		}
+		}
+	circle class
+		class Pg110circle extends Pg110shape 
+		{
+		}
+	rect class
+		class Pg110rect extends Pg110shape 
+		{
+		}
+	specalizesd class
+		class Pg110mainclass1 
+		{
+		public static void main(String[] args) 
+		{
+			turn(new Pg110circle());
+			spin(new Pg110rect()):
+		}
+		public static void turn(Pg110circle c) 
+		{
+			c.rotate();
+		}
+		public static void spin(Pg110rect r) 
+		{
+			r.rotate();
+		}
+		}
+	generalized class
+		class  Pg110mainclass2
+		{
+		public static void main(String[] args) 
+		{
+			revolve(new Pg110circle());
+			revolve(new Pg110rect());
+		}
+		public static void revolve(Pg110shape s) 
+		{
+			s.rotate();
+		}
+		}
+
+
+Polymorphism
+see ss21sept1
+1. Call to overloaded method is decided during compile time based on the arguments is called "Compile Time Polymorphism".
+	To achieve Compile Time Polymorphism
+		a. Static Methods
+		b. Method Overloading.
+2. Call to overridden method is decided during run time based on object creation is called "Run Time Polymorphism"
+	To achieve Run Time Polymorphism
+		a. Non static method
+		b. Method Overriding
+		c. Generalization
+		d. Upcasting
+
+
+	bike class
+		class Pg112bike 
+		{
+		public void start() 
+		}
+	herohonda class
+		class Pg112herohonda implements Pg112bike
+		{
+		public void start() 
+		{
+			System.out.println("kick start");
+		}
+		}
+	duke class
+		class Pg112duke implements Pg112bike
+		{
+		public void start() 
+		{
+			System.out.println("self start");
+		}
+		}
+	royalfeild class
+		class Pg112royalfield implements Pg112bike
+		{
+		public void start()
+		{
+			System.out.println("kick/self start");
+		}
+		}
+	main class
+		class sPg112mainclass
+		{
+		public static void main(String[] args) 
+		{
+			on(new Pg112herohonda());
+			on(new Pg112duke());
+			on(new Pg112royalfield));
+		}
+		public static void on(Pg112bike b)
+		{
+			b.start();
+		}
+		}
+
+
+see ss21sept2
+blue colour- by default
+green colour- programmer work
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+22-09-2020
+
+Thumb rules
+1. Every class/interface must be created inside a package
+2. Package is a collection of classes and interface
+3. Imports should be below the package and above class
+
+access specifiers- 
+	using these we can give the permissions to access
+	types of access specifiers
+		public 
+		private
+		protected
+		default
+	can give permission to
+		class
+		interface
+		static variables
+		non-static variables
+		static method
+		non-static method  
+		constructors
+
+under source/src we can create multiple package
+under package we can create multiple class/interface
+
+
+	A class
+		package demopack1;
+		public class A 
+		{
+		public static int i=89;
+		public int j=22;
+		public static void main(String[] args) 
+		{
+			System.out.println(i);
+			A a1= new A();
+			System.out.println(a1.j);
+		}
+		}
+	B class
+		package demopack1;
+		public class B 
+		{
+		public static void main(String[] args) 
+		{
+			System.out.println(A.i);
+			A a1= new A();
+			System.out.println(a1.j);
+		}
+		}
+	C class
+		package demopack2;
+		import demopack1.A;
+		public class C
+		{
+		public static void main(String[] args) 
+		{
+			System.out.println(A.i);
+			A a1= new A();
+			System.out.println(a1.j);
+		}
+		}
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+23-09-2020
+
+there are 2 types of syntaxes
+1. import packagename.classname;
+2. import packagename.*;
+
+	Create 2 packages, which contains same class with same members. Create another package with main class, and access both class members.	
+	pack5
+		package pack5;
+		public class sample 
+		{
+		public static void walk()
+		{
+			System.out.println("walk");
+		}
+		public void cycle()
+		{
+			System.out.println("cycle");
+		}
+		}
+	pack6
+		package pack5;
+		public class sample 
+		{
+		public static void walk()
+		{
+			System.out.println("walk");
+		}
+		public void cycle()
+		{
+			System.out.println("cycle");
+		}
+		}
+	main class
+		package testpack;
+		import pack5.sample;
+		public class mainclass 
+		{
+		public static void main(String[] args) 
+		{
+			sample.walk();
+			sample s1= new sample();
+			s1.cycle();
+			pack6.sample.walk();
+			pack6.sample s2= new pack6.sample();
+			s2.cycle();
+		}
+		}
+				here pack6.sample.walk(); is fully classified classname
+
+
+	pack6
+		package pack6;
+		public class sample 
+		{
+		public static void walk()
+		{
+			System.out.println("walk");
+		}
+		public void cycle()
+		{
+			System.out.println("cycle");
+		}
+		}
+	mainclass4 
+		package testpack;
+		import pack6.demo;
+		public class mainclass4 
+		{
+		public static void main(String[] args) 
+		{
+			System.out.println(demo.i);
+			System.out.println(demo.j);
+			demo.swim();
+		}
+		}
+	mainclass5 
+		package testpack;
+		import static pack6.demo.*;
+		public class mainclass5 
+		{
+		public static void main(String[] args) 
+		{
+			System.out.println(i);
+			System.out.println(j);
+			swim();
+		}
+		}
+	mainclass6 
+		package testpack;
+		import static pack6.demo.i;
+		import static pack6.demo.swim;
+		import pack6.demo;
+		public class mainclass6 
+		{
+		public static void main(String[] args) 
+		{
+			System.out.println(i);
+			swim();
+			System.out.println(demo.j);
+		}
+		}
+
+ 
+if the specific keyword public/private will not be given then it will be default/package level access specifier
+private access specifier can be accessed only within the same class itself
+		package diffaccess;
+		import demopack1.A;
+		class sampleprotected 
+		{
+			private static int i=89;
+			private int j=22;
+			private static void main(String[] args) 
+		{
+			System.out.println(i);
+			A a1= new A();
+			System.out.println(a1.j);
+		}
+		}
+protected access specifier
+public                             protected
+same class                         same class
+another class same packages        another class same packages 
+another class another packages     another class another packages 
+import                             import and inheritence
+ 
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+24-09-2020
+
+1. Access Specifier's are also called as Visibility Setter
+2. There are 4 types of Access Specifier's
+	a. public
+	b. private
+	c. protected
+	d. default [ No keyword ] [ it's also called as package access specifier]
+
+These access specifier's can be used on
+a. class
+b. interface
+c. static variable
+d. non static variable
+e. static method
+f. non static method
+g. constructor
+
+              within the class     within the another class of same package     within the another class of diff package      
+public        yes                  yes                                          yes
+protected     yes                  yes                                          after interfernce
+default       yes                  yes                                          no
+private       yes                  no                                           no
+
+Different ways of import syntax:
+import packagename.classname;
+import packagename.";
+import static packagename.classname.staticmembername;
+import static packagename.classname.*;
+
+Note: import statement must be located below the package and outside the class/interface.
+
+
+	sample class
+		package sept24;
+		public class Pg1sample 
+		{ 
+		private Pg1sample()
+		{
+			System.out.println("sample");			
+		}
+		public static Pg1sample getSampleObj() 
+		{
+			Pg1sample rv= new Pg1sample();
+			return rv;
+		}
+		public void test()
+		{
+			System.out.println("test");
+		}
+		}
+	main class
+		package sept24;
+		public class Pg2mainclass 
+		{
+		public static void main(String[] args) 
+		{
+			Pg1sample s1= Pg1sample.getSampleObj();
+			s1.test();
+		}
+		}
+
+
+java bean class
+	student class
+		package sept24;
+		public class Pg3student 
+		{
+		private int id;
+		private String name;
+		public int getId()
+		{
+			return id;
+		}
+		public String getName()
+		{
+			return name;
+		}
+		public void setId(int id)
+		{
+			this.id= id;
+		}
+		public void setName(String name)
+		{
+			this.name= name;
+		}
+		}
+	main class
+		package sept24;
+		public class Pg4mainclass 
+		{
+		public static void main(String[] args) 
+		{
+			Pg3student s1= new Pg3student();
+			System.out.println(s1.getId());
+			System.out.println(s1.getName());
+			s1.setId(37);
+			s1.setName("sjs");
+			System.out.println(s1.getId());
+			System.out.println(s1.getName());
+		}
+		}
+			here get get will take the values and set will give it to main class
+			see ss24sept1
+
+
+encapsulation
+wrapping of method is program
+class encapsulate method
+method encapsulates statements
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+25-09-2020
+
+Java bean class
+
+1. Developing a class, where each data member is declared as private and each data member will have separate getter and setter method. 
+   These type of classes are called "JAVA BEAN CLASS"
+   Conditions for Java bean class
+2. Getter method must begin with the word get followed by data member name.
+3. Getter method will return, respective data member.
+4. Setter method must begin with the word set followed by data member name.
+5. Setter method will take an argument for initializing respective data member.
+6. Getter method is called read access method.
+7. Setter method is called write access method.
+8. Java Bean Classes are used in EJB [Enterprise Java Bean] Application and JSP [Java Server page]
+
+Encapsulation
+
+1. Binding data members with member functions is called encapsulation.
+Or
+2. Wrapping data members and member functions into a single unit is called encapsulation.
+3. Encapsulation provides protection for data members from invalid values.
+4. In Encapsulated program, data members are declared as private and access to data members are provide through public methods.
+example of encapsulation
+	calender class
+		package sept25;
+		public class Pg3calender
+		{
+		private int monthNumber;
+		public Pg3calender(int monthNumber)
+		{	
+			provideMonthNumber(monthNumber);
+		}
+		public void provideMonthNumber(int monthNumber)
+		{
+			if(monthNumber>=1 && monthNumber<=12)
+			{ 
+				this.monthNumber= monthNumber;
+			}
+			else 
+			{
+				System.out.println("invalid month number");
+			}
+		}
+		public void displayMonthNumber()
+		{
+			System.out.println("month number is "+monthNumber);
+		}
+		}
+	main class
+		package sept25;
+		public class Pg4mainclass 
+		{
+		public static void main(String[] args) 
+		{
+			Pg3calender c1= new Pg3calender(7);
+			c1.displayMonthNumber();
+			c1.provideMonthNumber(-11);
+		}
+		}
+
+
+Single ton class
+
+1. Process of developing a class, which allows only one object creation, at any point of time. These type of classes are called Singleton classes.
+2. Singleton class constructor will be private, coz unnecessary object creation should not happen outside the class. 
+3. Singleton class will have a private static reference variable of the same class.
+4. Singleton class will have public static method, which is responsible for creation of same class object.
+example of Single ton class
+	sample class
+		package sept25;
+		public class Pg1sample 
+		{ 
+		private static Pg1sample rv= null; 
+		private Pg1sample()
+		{
+			System.out.println("sample");
+		}
+		public static Pg1sample getSampleObj() 
+		{
+			if(rv== null)
+			{
+				rv= new Pg1sample();
+			}
+			return rv;
+		}
+		public void test()
+		{
+			System.out.println("test");
+		}
+		}
+	main class
+		package sept25;
+		public class Pg2mainclass 
+		{
+		public static void main(String[] args) 
+		{
+			Pg1sample s1= Pg1sample.getSampleObj();
+			s1.test();
+			Pg1sample s2= Pg1sample.getSampleObj();
+			s2.test();
+			Pg1sample s3= Pg1sample.getSampleObj();
+			s3.test();
+		}
+		}
+	see ss25sept1
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+	

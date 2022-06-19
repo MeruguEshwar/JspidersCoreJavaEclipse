@@ -1,0 +1,14 @@
+package Forloop;
+
+public class Patrn4 
+{
+	public static void main(String[] args) 
+	{
+		System.out.print("Hii nani...");
+		mammu();
+	}
+	public static void mammu()
+	{
+		System.out.print("Weds mammu");
+	}
+}

@@ -1,0 +1,15 @@
+package Forloop;
+
+public class Patrn4 
+{
+	public static void main(String[] args) 
+	{
+		System.out.print("Hii nani...");
+		Patrn4 obj=new Patrn4();
+		obj.mammu();
+	}
+	public  void mammu()
+	{
+		System.out.print("Weds mammu");
+	}
+}

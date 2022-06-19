@@ -1,0 +1,14 @@
+package AccessModifier;
+
+public class Prog1 
+{
+	public static void main(String[] args) 
+	{
+		Prog1 obj = new Prog1();
+		obj.nani();
+	}
+	public void nani()
+	{
+		System.out.println("Call nani");
+	}
+}

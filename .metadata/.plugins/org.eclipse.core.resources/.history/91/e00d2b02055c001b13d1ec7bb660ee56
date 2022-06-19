@@ -1,0 +1,15 @@
+package Forloop;
+
+public class FrtProgram 
+{
+	public static void main(String[] args) 
+	{
+		for(char ch='a';ch<='z';ch++)
+		{
+			if(ch!='m')
+			{
+				System.out.print(ch);
+			}
+		}
+	}
+}

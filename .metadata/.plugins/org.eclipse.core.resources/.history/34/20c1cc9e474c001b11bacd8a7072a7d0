@@ -1,0 +1,19 @@
+package Nani;
+
+public class Mammu 
+{
+	int a=10;
+	static int b=20;
+	public static void main(String[] args) 
+	{
+		System.out.println("Main Starts.......");
+		System.out.println(b);
+		
+		
+		
+		System.out.println(a);
+		
+		
+		System.out.println("Main Ends.......");
+	}
+}

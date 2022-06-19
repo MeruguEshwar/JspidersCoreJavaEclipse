@@ -1,0 +1,10 @@
+package Hackathon;
+
+public class hack6 
+{
+	public static void main(String[] args) 
+	{
+		String arr[]={"N,A,N,I"};
+		System.out.println(arr[]);
+	}
+}

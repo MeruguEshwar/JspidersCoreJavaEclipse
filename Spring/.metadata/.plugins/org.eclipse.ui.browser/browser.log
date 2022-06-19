@@ -1,0 +1,76 @@
+
+Jan 23, 2021 17:12:14.595 NEW SESSION
+Jan 23, 2021 17:12:14.595 [0123/171214.583:ERROR:directory_reader_win.cc(43)] FindFirstFile: The system cannot find the path specified. (0x3)
+
+Jan 25, 2021 16:27:29.330 NEW SESSION
+Jan 25, 2021 16:27:29.330 [17276:18392:0125/162729.327:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -106
+Jan 25, 2021 16:27:53.313 [17276:13708:0125/162753.311:ERROR:account_info_fetcher.cc(60)] OnGetTokenFailure: Connection failed (-106).
+Jan 25, 2021 16:27:58.226 [17276:18392:0125/162758.224:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -106
+Jan 25, 2021 16:28:55.296 [17276:18392:0125/162855.294:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -106
+Jan 25, 2021 16:30:33.774 [17276:18392:0125/163033.772:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -106
+Jan 25, 2021 16:33:37.617 [17276:18392:0125/163337.615:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -106
+Jan 25, 2021 16:37:18.117 [0125/163718.110:ERROR:directory_reader_win.cc(43)] FindFirstFile: The system cannot find the path specified. (0x3)
+Jan 25, 2021 16:39:43.329 [17276:18392:0125/163943.328:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -106
+
+Jan 25, 2021 17:09:13.111 NEW SESSION
+Jan 25, 2021 17:09:13.111 [8072:12064:0125/170913.108:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -106
+Jan 25, 2021 17:09:38.24 [8072:12064:0125/170938.022:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -106
+Jan 25, 2021 17:10:37.955 [8072:12064:0125/171037.953:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -106
+Jan 25, 2021 17:12:11.592 [8072:12064:0125/171211.590:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -106
+
+Jan 26, 2021 16:11:40.771 NEW SESSION
+Jan 26, 2021 16:11:40.771 [0126/161140.761:ERROR:directory_reader_win.cc(43)] FindFirstFile: The system cannot find the path specified. (0x3)
+Jan 26, 2021 16:58:25.472 [19424:18304:0126/165825.471:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -105
+Jan 26, 2021 16:58:27.785 [19424:18304:0126/165827.783:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -106
+Jan 26, 2021 16:59:19.156 [19424:18304:0126/165919.154:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -106
+Jan 26, 2021 17:00:55.26 [19424:18304:0126/170055.024:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -106
+
+Jan 27, 2021 15:33:54.801 NEW SESSION
+Jan 27, 2021 15:33:54.801 [0127/153354.791:ERROR:directory_reader_win.cc(43)] FindFirstFile: The system cannot find the path specified. (0x3)
+
+Jan 28, 2021 13:20:01.456 NEW SESSION
+Jan 28, 2021 13:20:01.456 [16316:14016:0128/132001.455:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -106
+Jan 28, 2021 13:20:29.866 [16316:14016:0128/132029.864:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -106
+Jan 28, 2021 13:21:11.818 [16316:14016:0128/132111.816:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -106
+Jan 28, 2021 13:22:46.344 [16316:14016:0128/132246.344:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -106
+Jan 28, 2021 13:25:58.827 [16316:14016:0128/132558.824:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -106
+Jan 28, 2021 13:29:50.143 [0128/132950.135:ERROR:directory_reader_win.cc(43)] FindFirstFile: The system cannot find the path specified. (0x3)
+
+Jan 28, 2021 14:43:28.893 NEW SESSION
+Jan 28, 2021 14:43:28.893 [0128/144328.882:ERROR:directory_reader_win.cc(43)] FindFirstFile: The system cannot find the path specified. (0x3)
+Jan 28, 2021 15:31:03.104 [8956:21496:0128/153103.104:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -105
+Jan 28, 2021 15:31:05.693 [8956:21496:0128/153105.692:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -106
+Jan 28, 2021 15:31:10.973 [8956:21496:0128/153110.972:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -105
+Jan 28, 2021 15:31:22.18 [8956:21496:0128/153122.016:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -105
+Jan 28, 2021 15:32:14.650 [8956:21496:0128/153214.650:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -106
+
+Jan 29, 2021 10:39:57.439 NEW SESSION
+Jan 29, 2021 10:39:57.440 [5032:20500:0129/103957.436:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -105
+Jan 29, 2021 10:40:25.911 [5032:20500:0129/104025.907:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -105
+Jan 29, 2021 10:41:09.126 [5032:20500:0129/104109.125:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -105
+Jan 29, 2021 10:42:48.177 [5032:20500:0129/104248.175:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -105
+Jan 29, 2021 10:49:53.539 [0129/104953.531:ERROR:directory_reader_win.cc(43)] FindFirstFile: The system cannot find the path specified. (0x3)
+Jan 29, 2021 10:54:37.81 [5032:20500:0129/105437.080:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -106
+Jan 29, 2021 10:55:00.910 [5032:20500:0129/105500.910:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -106
+Jan 29, 2021 10:55:57.22 [5032:20500:0129/105557.020:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -106
+Jan 29, 2021 10:57:24.483 [5032:20500:0129/105724.481:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -106
+Jan 29, 2021 11:01:20.410 [5032:20500:0129/110120.409:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -106
+Jan 29, 2021 11:07:42.740 [5032:20500:0129/110742.738:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -106
+Jan 29, 2021 11:17:43.234 [5032:20500:0129/111743.233:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -106
+Jan 29, 2021 11:27:43.245 [5032:20500:0129/112743.243:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -106
+Jan 29, 2021 11:37:43.254 [5032:20500:0129/113743.252:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -106
+Jan 29, 2021 11:46:43.673 [5032:20500:0129/114643.673:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -105
+
+Jan 29, 2021 15:08:56.609 NEW SESSION
+Jan 29, 2021 15:08:56.609 [0129/150856.605:ERROR:directory_reader_win.cc(43)] FindFirstFile: The system cannot find the path specified. (0x3)
+
+Jan 29, 2021 15:50:09.635 NEW SESSION
+Jan 29, 2021 15:50:09.635 [0129/155009.630:ERROR:directory_reader_win.cc(43)] FindFirstFile: The system cannot find the path specified. (0x3)
+Jan 29, 2021 16:29:57.618 [0129/162957.609:ERROR:directory_reader_win.cc(43)] FindFirstFile: The system cannot find the path specified. (0x3)
+Jan 29, 2021 17:09:13.673 [9612:1576:0129/170913.672:ERROR:socket_stream.cc(219)] Closing stream with result -2
+Jan 29, 2021 17:11:42.621 [9612:1576:0129/171142.620:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -106
+Jan 29, 2021 17:11:44.598 [9612:1576:0129/171144.597:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -106
+Jan 29, 2021 17:32:15.105 [0129/173215.096:ERROR:directory_reader_win.cc(43)] FindFirstFile: The system cannot find the path specified. (0x3)
+Jan 29, 2021 17:43:42.545 [13300:5164:0129/174342.544:ERROR:socket_stream.cc(219)] Closing stream with result -2
+Jan 29, 2021 17:56:22.87 [13300:5164:0129/175622.086:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -105
+Jan 29, 2021 17:56:24.634 [13300:5164:0129/175624.634:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -106

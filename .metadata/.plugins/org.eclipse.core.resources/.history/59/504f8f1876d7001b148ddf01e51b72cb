@@ -1,0 +1,22 @@
+package Basic;
+
+import java.util.Scanner;
+
+public class reverse {
+	public static void main(String[] args) {
+		
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter String");
+		String str=sc.next();
+		
+		System.out.println("Enter Starting Pos");
+		int a1=sc.nextInt();
+		
+		System.out.println("Enter ending Pos");
+		int a2=sc.nextInt();
+		
+	
+		String s1=str.substring(a1,a2+1);
+		System.out.println(s1);
+	}
+}
